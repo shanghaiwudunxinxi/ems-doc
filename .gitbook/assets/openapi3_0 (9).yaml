@@ -1,0 +1,441 @@
+openapi: "3.0.0"
+info:
+  version: 0.0.0
+  title: EMS接口文档
+  # license:
+  #   name: MIT
+servers:
+  - url: "https://www.einfra.cn/wad/ems/v1"
+paths:
+  /device/by-time:
+    get:
+      summary: 根据更新时间范围获取设备列表
+      operationId: listDeviceByTime
+      tags:
+        - 设备管理
+      parameters:
+        - name: start-time
+          in: query
+          description: 开始时间戳（单位：秒）
+          required: true
+          schema:
+            type: integer
+            minimum: 0
+        - name: end-time
+          in: query
+          description: 结束时间戳（单位：秒）
+          required: true
+          schema:
+            type: integer
+            minimum: 0
+        - name: page-size
+          in: query
+          description: 每页设备数量
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 50
+        - name: page
+          in: query
+          description: 页码
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+      responses:
+        '200':
+          description: 设备列表
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    required:
+                      - list
+                      - total
+                    properties:
+                      list:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Device"
+                      total: 
+                          type: integer
+                          example: 10
+        '400':
+          description: 参数格式错误
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorValidation"
+  /device:
+    get:
+      summary: 设备列表
+      operationId: listDevice
+      tags:
+        - 设备管理
+      parameters:
+        - name: page-size
+          in: query
+          description: 每页设备数量
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 50
+        - name: page
+          in: query
+          description: 页码
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+      responses:
+        '200':
+          description: 设备列表
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    required:
+                      - list
+                      - total
+                    properties:
+                      list:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Device"
+                      total: 
+                          type: integer
+                          example: 10
+        '400':
+          description: 参数格式错误
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorValidation"
+    patch:
+      summary: 更新设备信息
+      operationId: updateDevice
+      tags:
+        - 设备管理
+      parameters:
+        - name: 
+          in: body
+          schema: 
+            $ref: "#/components/schemas/DeviceUpdate"
+      responses:
+        '200':
+          description: 更新成功
+        '400':
+          description: 该记录未找到
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorRecordNotFound"
+  /device/bind:
+    post:
+      summary: 绑定设备
+      operationId: bindDevice
+      tags:
+        - 设备管理
+      parameters:
+        - name: 
+          in: body
+          schema: 
+            $ref: "#/components/schemas/DeviceBind"
+      responses:
+        '200':
+          description: 绑定成功
+        '400':
+          description: 该记录未找到
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorRecordNotFound"
+  /charge-policy:
+    get:
+      summary: 获取充放电策略列表
+      operationId: getChargePolicy
+      tags:
+        - 充放电策略
+      parameters: 
+        - name: device-uid
+          in: query
+          description: 设备唯一ID
+          required: true
+          schema:
+            type: integer
+            minimum: 0
+        - name: page-size
+          in: query
+          description: 每页策略数量
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 50
+        - name: page
+          in: query
+          description: 页码
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+      responses:
+        '200':
+          description: 策略列表
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - data
+                properties:
+                  data:
+                    required:
+                      - list
+                      - total
+                    properties:
+                      list:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/ChargePolicy"
+                      total: 
+                        type: integer
+                        example: 10
+        '400':
+          description: 参数格式错误
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorValidation"
+
+    post:
+      summary: 创建充放电策略列表
+      operationId: createChargePolicy
+      tags:
+        - 充放电策略
+      parameters:
+        - name: 
+          in: body
+          schema: 
+            $ref: "#/components/schemas/ChargePolicy"
+      responses:
+        '200':
+          description: 创建成功
+        '400':
+          description: 参数格式错误
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorValidation"
+components:
+  schemas:
+    Device:
+      type: object
+      required:
+        - uid
+        - name
+        - code
+      properties:
+        uid:
+          type: string
+          example: c9bb3638-8bc1-4cce-a2da-faf210bb8dbc
+          description: 设备UID
+        name:
+          type: string
+          example: ems设备
+          description: 设备名称
+        code:
+          type: integer
+          example: 1001
+          description: 设备编码
+        location:
+          type: string
+          example: 上海
+          description: 设备位置
+    DeviceBind:
+      type: object
+      required:
+        - license-code
+        - name
+        - code
+      properties:
+        license-code:
+          type: string
+          example: xxxxxx
+          description: 设备唯一码
+        name:
+          type: string
+          example: ems设备
+          description: 设备名称
+        code:
+          type: integer
+          example: 1001
+          description: 设备编码
+        location:
+          type: string
+          example: 上海
+          description: 设备位置
+    DeviceUpdate:
+      type: object
+      required:
+        - uid
+      properties:
+        uid:
+          type: string
+          example: c9bb3638-8bc1-4cce-a2da-faf210bb8dbc
+        name:
+          type: string
+          example: ems设备
+        code:
+          type: integer
+          example: 1001
+          description: 设备编码
+        location:
+          type: string
+          example: 上海
+          description: 设备位置
+    ChargePolicy:
+      type: object
+      required:
+        - charge_type
+        - month
+        - week_day
+        - settings
+      properties:
+        name:
+          type: string
+          name: 策略名称
+          description: 策略名称
+          example: 策略1
+        charge_type:
+          type: integer
+          name: 充放电类型
+          description: 充放电类型 (1-定时充放电,2-分时电价模式,3-自发自用模式), 当前仅支持定时充放电
+          example: 1
+          enum: [1,2,3]
+        month:
+          type: array
+          name: 月份选择
+          description: 月份选择
+          maxItems: 12
+          example: [6,7,8,9]
+          items:
+            type: integer
+            minimum: 1
+            maximum: 12
+        week_day:
+          type: array
+          name: 星期选择
+          description: 星期选择
+          maxItems: 7
+          example: [1,7]
+          items:
+            type: integer
+            minimum: 1
+            maximum: 7
+        settings:
+          type: array
+          name: 充放电时间选择
+          description: 充放电时间选择
+          minItems: 1
+          maxItems: 4
+          items:
+            $ref: "#/components/schemas/chargeTime"
+    chargeTime:
+      type: object
+      required:
+        - start_hour
+        - start_minute
+        - end_hour
+        - end_minute
+        - charge_mode
+        - running_mode
+      properties:
+        start_hour:
+          type: integer
+          name: 开始小时
+          description: 开始小时
+          minimum: 0
+          maximum: 24
+          example: 8
+        start_minute:
+          type: integer
+          name: 开始分钟
+          description: 开始分钟
+          minimum: 0
+          maximum: 59
+          example: 0
+        end_hour:
+          type: integer
+          name: 结束小时
+          description: 结束小时
+          minimum: 0
+          maximum: 24
+          example: 16
+        end_minute:
+          type: integer
+          name: 结束分钟
+          description: 结束分钟
+          minimum: 0
+          maximum: 59
+          example: 59
+        charge_mode:
+          type: integer
+          name: 充放电模式
+          description: 充放电模式 (0-待机, 1-充电, 2-放电)
+          example: 1
+          enum: [0,1,2]
+        running_mode:
+          type: integer
+          name: 运行模式
+          description: 运行模式 (0-无, 1-恒流, 2-恒功率)
+          example: 1
+          enum: [0,1,2]
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+    ErrorValidation:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          example: 100002
+        message:
+          type: string
+          example: "参数格式错误"
+    ErrorRecordNotFound:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          example: 100007
+        message:
+          type: string
+          example: "该记录未找到"
