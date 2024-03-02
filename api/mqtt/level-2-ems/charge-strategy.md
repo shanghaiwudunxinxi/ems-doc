@@ -4,7 +4,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/list`</mark>`/post`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/list`</mark>`/post`
 * **权限：**上报
 *   **Payload主结构**
 
@@ -77,15 +77,11 @@
 }
 </code></pre>
 
-
-
-
-
 ## 平台请求同步充放电策略
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
 * **权限：**订阅
 *   **Payload主结构**
 
@@ -109,7 +105,7 @@
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/result`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/result`
 * **权限：**发布
 *   **Payload主结构**
 
@@ -183,7 +179,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/command`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/command`
 * **权限：**上报
 *   **Payload主结构**
 
@@ -236,7 +232,7 @@
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/result`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/result`
 * **权限：**订阅
 *   **Payload主结构**
 
@@ -263,7 +259,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/command`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/command`
 * **权限：**上报
 *   **Payload主结构**
 
@@ -315,7 +311,7 @@
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/result`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/result`
 * **权限：**订阅
 *   **Payload主结构**
 
@@ -341,7 +337,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/command`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/command`
 * **权限：**上报
 *   **Payload主结构**
 
@@ -367,7 +363,7 @@
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/result`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/result`
 * **权限：**订阅
 *   **Payload主结构**
 
@@ -394,7 +390,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/command`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/command`
 * **权限：**上报
 *   **Payload主结构**
 
@@ -442,7 +438,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/result`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/result`
 * **权限：**上报
 *   **Payload主结构**
 

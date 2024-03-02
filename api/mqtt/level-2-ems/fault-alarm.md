@@ -4,7 +4,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`alarm/details`</mark>`/post`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`alarm/details`</mark>`/post`
 * **权限：**订阅
 *   **Payload主结构**
 

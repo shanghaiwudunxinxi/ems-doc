@@ -4,7 +4,7 @@
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/list`</mark>`/post`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/list`</mark>`/post`
 * **权限：**上报
 *   **Payload主结构**
 
@@ -64,15 +64,11 @@
 ```
 {% endcode %}
 
-
-
-
-
 ## 平台请求同步防逆流过需策略
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
 * **权限：**发布
 *   **Payload主结构**
 
@@ -94,15 +90,11 @@
 }
 ```
 
-
-
-
-
 ## 同步防逆流过需电策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/sync`</mark>`/result`
-  * 平台默认MQTT： `待定`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/sync`</mark>`/result`
 * **权限：**订阅
 *   **Payload主结构**
 
