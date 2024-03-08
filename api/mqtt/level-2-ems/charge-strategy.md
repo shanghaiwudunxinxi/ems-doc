@@ -17,7 +17,11 @@
     <table><thead><tr><th width="173">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option><option value="1b28025203f644c291919cb0f1184736" label="float" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th width="127">描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备UID</td><td>-</td><td><a href="https://wudun.atlassian.net/browse/DGHDJSJKD-1?atlOrigin=eyJpIjoiYjM0MTA4MzUyYTYxNDVkY2IwMzVjOGQ3ZWQ3NzMwM2QiLCJwIjoianN3LWdpdGxhYlNNLWludCJ9">DGHDJSJKD-1</a></td></tr><tr><td>name</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备名称</td><td>-</td><td>ems设备</td></tr><tr><td>site_name</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>站点名称</td><td>-</td><td>ems站点</td></tr><tr><td>location</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>详细地理位置</td><td>-</td><td>wudun</td></tr><tr><td>longitude</td><td><span data-option="1b28025203f644c291919cb0f1184736">float</span></td><td>true</td><td>经度</td><td>-</td><td></td></tr><tr><td>latitude</td><td><span data-option="1b28025203f644c291919cb0f1184736">float</span></td><td>true</td><td>纬度</td><td></td><td></td></tr><tr><td>level</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>EMS等级</td><td>[1, 2]</td><td>1</td></tr><tr><td>type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备类型</td><td>-</td><td>ems</td></tr><tr><td>running_status</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td><p>运行状态</p><p>1-运行</p><p>2-离线</p><p>3-故障  </p></td><td>[1,2,3]</td><td>1</td></tr><tr><td>host</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>地址</td><td>-</td><td>192.168.0.1</td></tr><tr><td>port</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>端口</td><td>[0,65525]</td><td>2171</td></tr><tr><td>license</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>激活码</td><td>-</td><td>2YIZedmOtl4pcqo1EA4zhM5gofDI</td></tr></tbody></table>
 *   **Payload - chargeTime**
 
-    <table><thead><tr><th width="184">参数</th><th width="122">类型<select><option value="7d4bdb9b9c74432db026fc1a42c657f8" label="int" color="blue"></option><option value="788ee30047d74e5fadefda8ae2c6b579" label="[]int" color="blue"></option><option value="dc27004c92e443db924ae8f38f2ec7f1" label="[]chargeTime" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>start_hour</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>开始小时</td><td>[0,23]</td><td>20</td></tr><tr><td>start_minute</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>开始分钟</td><td>[0,59]</td><td>0</td></tr><tr><td>end_hour</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>结束小时</td><td>[0,23]</td><td>23</td></tr><tr><td>end_minute</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>结束分钟</td><td>[0,59]</td><td>0</td></tr><tr><td>cdc_enable_mode</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>充放电设定</td><td>0-待机,<br>1-充电,<br>2-放电</td><td>1</td></tr><tr><td>run_power</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>运行功率(单位：kW)</td><td>[0,65535]</td><td>300</td></tr></tbody></table>
+    <table><thead><tr><th width="184">参数</th><th width="122">类型<select><option value="7d4bdb9b9c74432db026fc1a42c657f8" label="int" color="blue"></option><option value="788ee30047d74e5fadefda8ae2c6b579" label="[]int" color="blue"></option><option value="dc27004c92e443db924ae8f38f2ec7f1" label="[]chargeTime" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>start_hour</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>开始小时</td><td>[0,24]</td><td>20</td></tr><tr><td>start_minute</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>开始分钟</td><td>[0,59]</td><td>0</td></tr><tr><td>end_hour</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>结束小时</td><td>[0,24]</td><td>24</td></tr><tr><td>end_minute</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>结束分钟</td><td>[0,59]</td><td>0</td></tr><tr><td>cdc_enable_mode</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>充放电设定</td><td>0-待机,<br>1-充电,<br>2-放电</td><td>1</td></tr><tr><td>run_power</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>运行功率(单位：kW)</td><td>[0,65535]</td><td>300</td></tr></tbody></table>
+
+    * **时间说明：**`start_hour`, `start_minute`, `end_hour`, `end_minute`组成左闭右开的时间区间
+      * 如`start_hour=14`, `start_minute=15`, `end_hour=15`, `end_minute=00`表示`[14:15, 15:00)`，即14:15开始到15:00前结束。
+      * 如`start_hour=20`, `start_minute=00`, `end_hour=24`, `end_minute=00`表示`[20:00, 24:00)`，即20:00开始到24:00前结束
 * **Payload示例**
 
 <pre class="language-json" data-line-numbers><code class="lang-json"><strong>{
@@ -39,7 +43,7 @@
       6
     ],
     "ems_devices": [{
-      "uid": "QmqEiSCEuFNXCozS66W9y8-5",
+      "id": 1
       "name": "右206",
       "site_name": "测试站点",
       "location": "",
@@ -51,13 +55,13 @@
       "running_status": 1,
       "host": "192.168.77.206",
       "port": 1502,
-      "license": "2YIZedmOtl4pcqo1EA4zhM5gofDI"
+      "license": "xxxxx"
     }],
     "settings": [
       {
         "start_hour": 20,
         "start_minute": 0,
-        "end_hour": 23,
+        "end_hour": 24,
         "end_minute": 0,
         "cdc_enable_mode": 2,
         "run_power": 300
