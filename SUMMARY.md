@@ -25,6 +25,7 @@
   * [充放电策略](api/mqtt/charge-policy.md)
   * [二级EMS](api/mqtt/level-2-ems/README.md)
     * [子设备信息](api/mqtt/level-2-ems/sub-device.md)
+    * [电表设备信息](api/mqtt/level-2-ems/sub-elemeter.md)
     * [充放电策略](api/mqtt/level-2-ems/charge-strategy.md)
     * [防逆流过需策略](api/mqtt/level-2-ems/overdemand.md)
     * [放电深度保策略](api/mqtt/level-2-ems/charge-depth.md)
