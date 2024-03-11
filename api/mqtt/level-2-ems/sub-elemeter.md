@@ -12,7 +12,7 @@
 
 * **Payload - data/eleMeter**
 
-<table><thead><tr><th width="199">参数</th><th>类型</th><th>是否必填</th><th>描述</th><th>样例</th></tr></thead><tbody><tr><td>id</td><td>uint</td><td>是</td><td>ID</td><td>1</td></tr><tr><td>station_name</td><td>str</td><td>是</td><td>站点名称</td><td>丽宝广场</td></tr><tr><td>proto_type</td><td>uint8</td><td>是</td><td>协议类型 1:modbus-tcp 2:modbus-rtu</td><td>1</td></tr><tr><td>slave_id</td><td>uint8</td><td>是</td><td>设备从站id</td><td></td></tr><tr><td>host</td><td>str</td><td>否</td><td>地址 (协议类型为1时必填)</td><td>192.168.0.1</td></tr><tr><td>port</td><td>uint16</td><td>否</td><td>端口 (协议类型为1时必填)</td><td>[0,65535]</td></tr><tr><td>com_addr</td><td>str</td><td>否</td><td>串口地址 (协议类型为2时必填)</td><td>/dev/ttyS1</td></tr><tr><td>com_no</td><td>uint</td><td>否</td><td>串口号 (协议类型为2时必填)</td><td>1</td></tr><tr><td>baud_rate</td><td>int</td><td>否</td><td>波特率 (协议类型为2时必填)</td><td>9600</td></tr><tr><td>data_bits</td><td>int</td><td>否</td><td>数据位 (协议类型为2时必填)</td><td>8</td></tr><tr><td>stop_bits</td><td>int</td><td>否</td><td>停止位 (协议类型为2时必填)</td><td>1</td></tr><tr><td>parity</td><td>string</td><td>否</td><td>校验位 (协议类型为2时必填)</td><td>N:无校验 E:奇校验 O:偶校验</td></tr><tr><td>name</td><td>str</td><td>是</td><td>设备名称</td><td>东区变压器</td></tr><tr><td>elec_device_type_id</td><td>uint</td><td>是</td><td>电表类型id</td><td>1</td></tr><tr><td>elec_device_type</td><td>elec_device_type</td><td>是</td><td>电表类型对象</td><td></td></tr><tr><td>pt</td><td>uint</td><td>是</td><td>电压互感</td><td>10</td></tr><tr><td>ct</td><td>uint</td><td>是</td><td>电流互感</td><td>10</td></tr><tr><td>direction</td><td>int</td><td>是</td><td>电表方向</td><td></td></tr><tr><td>running_status</td><td>uint8</td><td>是</td><td>运行状态</td><td>1</td></tr><tr><td>purpose</td><td>int</td><td>否</td><td>用途 1-关口表 2-计量表</td><td>1</td></tr></tbody></table>
+<table><thead><tr><th width="199">参数</th><th>类型</th><th>是否必填</th><th>描述</th><th>样例</th></tr></thead><tbody><tr><td>id</td><td>uint</td><td>是</td><td>ID</td><td>1</td></tr><tr><td>station_name</td><td>str</td><td>是</td><td>站点名称</td><td>丽宝广场</td></tr><tr><td>proto_type</td><td>uint8</td><td>是</td><td>协议类型 1:modbus-tcp 2:modbus-rtu</td><td>1</td></tr><tr><td>slave_id</td><td>uint8</td><td>是</td><td>设备从站id</td><td></td></tr><tr><td>host</td><td>str</td><td>否</td><td>地址 (协议类型为1时必填)</td><td>192.168.0.1</td></tr><tr><td>port</td><td>uint16</td><td>否</td><td>端口 (协议类型为1时必填)</td><td>[0,65535]</td></tr><tr><td>com_addr</td><td>str</td><td>否</td><td>串口地址 (协议类型为2时必填)</td><td>/dev/ttyS1</td></tr><tr><td>com_no</td><td>uint</td><td>否</td><td>串口号 (协议类型为2时必填)</td><td>1</td></tr><tr><td>baud_rate</td><td>int</td><td>否</td><td>波特率 (协议类型为2时必填)</td><td>9600</td></tr><tr><td>data_bits</td><td>int</td><td>否</td><td>数据位 (协议类型为2时必填)</td><td>8</td></tr><tr><td>stop_bits</td><td>int</td><td>否</td><td>停止位 (协议类型为2时必填)</td><td>1</td></tr><tr><td>parity</td><td>string</td><td>否</td><td>校验位 (协议类型为2时必填)</td><td>N:无校验 E:奇校验 O:偶校验</td></tr><tr><td>name</td><td>str</td><td>是</td><td>设备名称</td><td>东区变压器</td></tr><tr><td>ele_device_type_id</td><td>uint</td><td>是</td><td>电表类型id</td><td>1</td></tr><tr><td>ele_device_type</td><td>ele_device_type</td><td>是</td><td>电表类型对象</td><td></td></tr><tr><td>pt</td><td>uint</td><td>是</td><td>电压互感</td><td>10</td></tr><tr><td>ct</td><td>uint</td><td>是</td><td>电流互感</td><td>10</td></tr><tr><td>direction</td><td>int</td><td>是</td><td>电表方向</td><td></td></tr><tr><td>running_status</td><td>uint8</td><td>是</td><td>运行状态</td><td>1</td></tr><tr><td>purpose</td><td>int</td><td>否</td><td>用途 1-关口表 2-计量表</td><td>1</td></tr></tbody></table>
 
 * **Payload示例**
 
@@ -36,8 +36,8 @@
     "uid": "",
     "station_name": "",
     "name": "test111",
-    "elec_device_type_id": 3,
-    "elec_device_type": {
+    "ele_device_type_id": 3,
+    "ele_device_type": {
         "id": 0,
         "name": ""
     },
@@ -104,8 +104,8 @@
     "port": 1808,
     "slave_id": 1,
     "name": "总电表",
-    "elec_device_type_id": 0,
-    "elec_device_type": {
+    "ele_device_type_id": 0,
+    "ele_device_type": {
         "id": 0,
         "name": ""
     },
@@ -171,8 +171,8 @@
     "port": 1808,
     "slave_id": 1,
     "name": "总电表",
-    "elec_device_type_id": 0,
-    "elec_device_type": {
+    "ele_device_type_id": 0,
+    "ele_device_type": {
         "id": 0,
         "name": ""
     },
