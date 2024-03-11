@@ -67,8 +67,8 @@
 ## 平台请求同步防逆流过需策略
 
 * **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
+  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/sync`</mark>`/command`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/sync`</mark>`/command`
 * **权限：**发布
 *   **Payload主结构**
 
@@ -338,6 +338,4 @@
     "timestamp": 1695265671000
 }
 ```
-
-
 
