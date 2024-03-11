@@ -1,6 +1,10 @@
+---
+description: 一级EMS
+---
+
 # 设备事件
 
-## 定时信息上报
+## EMS定时信息上报
 
 * **Topic：**`v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`report/regular`</mark>`/post`
 * **权限：**订阅
