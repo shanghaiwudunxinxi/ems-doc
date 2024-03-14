@@ -249,9 +249,9 @@
     <table><thead><tr><th>错误码<select><option value="271841fe398248e2ad777dd883d4754c" label="400" color="blue"></option><option value="3c1ae8fc6fe644f78b5f6b6f889f7621" label="200" color="blue"></option></select></th><th>描述</th><th>说明</th></tr></thead><tbody><tr><td><span data-option="3c1ae8fc6fe644f78b5f6b6f889f7621">200</span></td><td>下发成功</td><td></td></tr><tr><td><span data-option="271841fe398248e2ad777dd883d4754c">400</span></td><td>参数有误</td><td></td></tr></tbody></table>
 *   **Data**
 
-    | 参数         | 说明   |
-    | ---------- | ---- |
-    | policy\_id | 策略id |
+    | 参数         | 类型  | 说明      |
+    | ---------- | --- | ------- |
+    | policy\_id | int | 充放电策略id |
 * **Payload示例**
 
 ```json
