@@ -214,6 +214,9 @@
     "type": "streaming_overdemand_create",
     "reply": "3e681859-6917-4b9a-9afd-3f162cd185bd",
     "code": 200,
+    "data": {
+        "id": 1
+    },
     "msg": "",
     "device_uid": "iYRkfVpi77",
     "timestamp": 1695265671000
