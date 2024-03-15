@@ -190,8 +190,8 @@
 ## 创建防过需防逆流策略响应
 
 * **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/update`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/update`</mark>`/result`
+  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/create`</mark>`/result`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/create`</mark>`/result`
 * **权限：**订阅
 *   **Payload主结构**
 
@@ -214,7 +214,7 @@
 }
 ```
 
-## 下发创建防逆流过需电策略指令
+## 下发更新防逆流过需电策略指令
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`streaming_overdemand/update`</mark>`/command`
