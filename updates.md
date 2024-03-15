@@ -1,5 +1,20 @@
 # 更新记录
 
+## 2024.03.15
+
+* 更新接口
+  * [一级EMS充放电策略](api/http/charge-strategy.md)settings由原来8个增加到12个
+
+## 2024.03.14
+
+* 更新接口
+  * [二级EMS充放电策略](api/mqtt/level-2-ems/charge-strategy.md)创建后返回策略ID
+
+## 2024.03.13
+
+* 更新接口
+  * [二级EMS充放电策略](api/mqtt/level-2-ems/charge-strategy.md)支持按日配置
+
 ## 2024.03.11
 
 * 更新接口
