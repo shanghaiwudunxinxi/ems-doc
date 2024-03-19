@@ -315,7 +315,7 @@
                 "run_power": 100
             }
         ],
-        "ems_devices_uids": [
+        "ems_device_uids": [
             "ZedmOtl4pc"
         ]
 //      "apply_to_all": true,
