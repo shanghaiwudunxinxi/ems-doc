@@ -33,3 +33,4 @@
     * [故障告警](api/mqtt/level-2-ems/fault-alarm.md)
     * [支路设计](api/mqtt/level-2-ems/power-node.md)
     * [设备事件](api/mqtt/level-2-ems/device-event.md)
+    * [设备事件V2](api/mqtt/level-2-ems/device-event-1.md)
