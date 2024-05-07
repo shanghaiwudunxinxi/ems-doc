@@ -3,8 +3,8 @@
 ## 发送pcs远程控制策略
 
 * **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`control/pcs/set/command`</mark>
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`control/pcs/set/command`</mark>
+  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`pcs_control/set/command`</mark>
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`pcs_control/set/command`</mark>
 * **权限：**订阅
 *   **Payload主结构**
 
@@ -36,8 +36,8 @@
 ## 发送pcs远程控制策略响应
 
 * **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`control/pcs/set`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`control/pcs/set`</mark>`/result`
+  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`pcs_control/set`</mark>`/result`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`pcs_control/set`</mark>`/result`
 * **权限：**订阅
 *   **Payload主结构**
 
@@ -69,8 +69,8 @@
 ## 请求同步pcs远程控制策略
 
 * **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`control/pcs/sync/command`</mark>
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`control/pcs/sync/command`</mark>
+  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`pcs_control/sync/command`</mark>
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`pcs_control/sync/command`</mark>
 * **权限：**发布
 *   **Payload主结构**
 
@@ -96,8 +96,8 @@
 ## 同步pcs远程控制策略响应
 
 * **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`control/pcs/sync`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`control/pcs/sync/`</mark>`result`
+  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`pcs_control/sync`</mark>`/result`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`pcs_control/sync/`</mark>`result`
 * **权限：**订阅
 *   **Payload主结构**
 
