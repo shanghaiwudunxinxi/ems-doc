@@ -11,7 +11,7 @@
     <table><thead><tr><th width="173">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>mid</td><td><span data-option="36cc16022bbb4c7b93fe3a347e4eee85">UUID</span></td><td>true</td><td>消息ID</td><td>-</td><td>3e681859-6917-4b9a-9afd-3f162cd185bd</td></tr><tr><td>type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>消息类型</td><td>bms_set</td><td>bms_set</td></tr><tr><td>data</td><td><span data-option="005ee50172ec4f44a83308b0bfb12d48">data</span></td><td>true</td><td>消息内容</td><td>-</td><td>见<strong>Payload - data</strong></td></tr><tr><td>sub_device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>一级设备UID，仅二级替一级设备上报时需要该字段</td><td>-</td><td>jHODSda39</td></tr><tr><td>device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备UID</td><td>-</td><td>iYRkfVpi77</td></tr><tr><td>timestamp</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>消息时间戳（单位：毫秒）</td><td>(0, ∞)</td><td>1696837112000</td></tr></tbody></table>
 *   **Payload - data**
 
-    <table><thead><tr><th width="209">参数</th><th width="81">类型<select><option value="7a689ae99ed145e183989371bbcf21ce" label="int" color="blue"></option></select></th><th width="85" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>battery_system_reset</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>true</td><td>故障复位</td><td>[0,1]</td><td>1</td></tr><tr><td>high_voltage_command</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>true</td><td>接触器断开/闭合</td><td>[0,1]</td><td>0</td></tr></tbody></table>
+    <table><thead><tr><th width="209">参数</th><th width="81">类型<select><option value="7a689ae99ed145e183989371bbcf21ce" label="int" color="blue"></option></select></th><th width="85" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>battery_system_reset</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>false</td><td>故障复位</td><td>[0,1]</td><td>1</td></tr><tr><td>high_voltage_command</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>false</td><td>接触器断开/闭合</td><td>[0,1]</td><td>0</td></tr></tbody></table>
 * **Payload示例**
 
 <pre class="language-json" data-line-numbers><code class="lang-json"><strong>{
@@ -53,6 +53,7 @@
     "reply": "3e681859-6917-4b9a-9afd-3f162cd185bd",
     "code": 200,
     "msg": "下发成功",
+    "sub_device_uid": "jHODSda39",
     "device_uid": "iYRkfVpi77",
     "timestamp": 1695265671000
 }
@@ -99,7 +100,7 @@
 * **Payload - data**
 *
 
-    <table><thead><tr><th width="209">参数</th><th width="81">类型<select><option value="7a689ae99ed145e183989371bbcf21ce" label="int" color="blue"></option></select></th><th width="85" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>battery_system_reset</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>true</td><td>故障复位</td><td>[0,1]</td><td>1</td></tr><tr><td>high_voltage_command</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>true</td><td>接触器断开/闭合</td><td>[0,1]</td><td>0</td></tr></tbody></table>
+    <table><thead><tr><th width="209">参数</th><th width="81">类型<select><option value="7a689ae99ed145e183989371bbcf21ce" label="int" color="blue"></option></select></th><th width="85" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>battery_system_reset</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>false</td><td>故障复位</td><td>[0,1]</td><td>1</td></tr><tr><td>high_voltage_command</td><td><span data-option="7a689ae99ed145e183989371bbcf21ce">int</span></td><td>false</td><td>接触器断开/闭合</td><td>[0,1]</td><td>0</td></tr></tbody></table>
 * **Payload示例**
 
 <pre class="language-json"><code class="lang-json"><strong>{  
