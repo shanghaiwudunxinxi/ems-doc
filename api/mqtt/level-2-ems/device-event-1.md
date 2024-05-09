@@ -15,7 +15,7 @@ description: V2
     <table><thead><tr><th width="173" align="center">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td align="center">mid</td><td><span data-option="36cc16022bbb4c7b93fe3a347e4eee85">UUID</span></td><td>true</td><td>消息ID</td><td>-</td><td>3e681859-6917-4b9a-9afd-3f162cd185bd</td></tr><tr><td align="center">type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>消息类型</td><td>report_regular</td><td>report_regular</td></tr><tr><td align="center">data</td><td><span data-option="005ee50172ec4f44a83308b0bfb12d48">data</span></td><td>true</td><td>消息内容</td><td>-</td><td>见<strong>Payload - data</strong></td></tr><tr><td align="center">sub_device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>false</td><td>子设备UID，仅二级替单个子设备上报时需要该字段</td><td>-</td><td>jHODSda39</td></tr><tr><td align="center">sub_device_id</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>false</td><td>子设备ID，仅二级替单个子设备上报时需要该字段</td><td>(0, ∞)</td><td>2</td></tr><tr><td align="center">device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备ID</td><td>-</td><td>iYRkfVpi77</td></tr><tr><td align="center">timestamp</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>消息时间戳（单位：毫秒）</td><td>(0, ∞)</td><td>1696837112000</td></tr></tbody></table>
 *   **Payload - data/ReportRegular**
 
-    <table><thead><tr><th width="97" align="center">参数</th><th width="255" align="center">类型</th><th width="89" data-type="checkbox">是否必填</th><th width="220">描述</th><th>样例</th></tr></thead><tbody><tr><td align="center">type</td><td align="center">str</td><td>true</td><td><p>sub_ems_fire: 一级EMS设备火警数据</p><p>sub_ems_aircon:一级EMS设备风冷数据</p><p>sub_ems_liquidcon:一级EMS设备液冷数据</p><p>sub_ems_bms: 一级EMS设备BMS数据</p><p>sub_ems_pcs: 一级EMS设备PCS数据<br>sub_elemeter: 电表数据<br>sub_elemeters: 电表数据批量<br>ems: 二级ems数据</p></td><td>"ems"</td></tr><tr><td align="center">index</td><td align="center">int</td><td>true</td><td>编号</td><td>0</td></tr><tr><td align="center">data</td><td align="center"><p>[](<strong>SubEMSFire/SubEMSAircon/SubEMSLiquid)</strong></p><p><strong>[]SubEMSBMS</strong></p><p><strong>[]SubEMSPCS</strong></p><p><strong>EMSData</strong></p><p><strong>SubEleMeterData</strong></p><p><strong>SubEleMetersData</strong></p></td><td>true</td><td><p>一级EMS火警/风冷/液冷数据组合</p><p>一级EMS设备BMS数据</p><p>一级EMS设备PCS数据</p><p>二级EMS数据</p><p>电表数据</p><p>电表组合数据</p></td><td>-</td></tr></tbody></table>
+    <table><thead><tr><th width="97" align="center">参数</th><th width="263" align="center">类型</th><th width="89" data-type="checkbox">是否必填</th><th width="220">描述</th><th>样例</th></tr></thead><tbody><tr><td align="center">type</td><td align="center">str</td><td>true</td><td><p>sub_ems_fire: 一级EMS设备火警数据</p><p>sub_ems_aircon:一级EMS设备风冷数据</p><p>sub_ems_liquidcon:一级EMS设备液冷数据</p><p>sub_ems_bms: 一级EMS设备BMS数据</p><p>sub_ems_pcs: 一级EMS设备PCS数据<br>sub_elemeter: 电表数据<br>sub_elemeters: 电表数据批量<br>ems: 二级ems数据</p></td><td>"ems"</td></tr><tr><td align="center">index</td><td align="center">int</td><td>true</td><td>编号</td><td>0</td></tr><tr><td align="center">data</td><td align="center"><p>[](<strong>SubEMSFire/SubEMSAircon/SubEMSLiquid)/</strong></p><p><strong>[]SubEMSBMS/</strong></p><p><strong>[]SubEMSPCS/</strong></p><p><strong>EMSData/</strong></p><p><strong>SubEleMeterData/</strong></p><p><strong>SubEleMetersData</strong></p></td><td>true</td><td><p>一级EMS火警/风冷/液冷数据组合</p><p>一级EMS设备BMS数据</p><p>一级EMS设备PCS数据</p><p>二级EMS数据</p><p>电表数据</p><p>电表组合数据</p></td><td>-</td></tr></tbody></table>
 
 
 
@@ -105,10 +105,10 @@ description: V2
     "sub_device_id": 2,
     "device_uid": "xxxxxxxxxx",
     "timestamp": 1705980251899,
-    "data": {
+    "data": [{
         "type": "sub_ems_bms",
         "index": 0,
-        "data": [{
+        "data": {
             "running_status": 1,
             "soc": 80,
             "soh": 90,
@@ -139,8 +139,43 @@ description: V2
             "cell_temperature_range": 45,
             "cell_voltage": [4150,4130,4110...], // 数组长度固定为700
             "cell_temp": [20,23,21...] // 数组长度固定为700
-        }]
-    }
+        }
+    },{
+        "type": "sub_ems_bms",
+        "index": 1,
+        "data": {
+            "running_status": 1,
+            "soc": 80,
+            "soh": 90,
+            "current_chargeable_energy": 1000,
+            "current_dis_chargeable_energy": 2000,
+            "total_voltage": 400,
+            "total_current": -10,
+            "power": 4000,
+            "charge_accumulated_energy": 100000,
+            "discharge_accumulated_energy": 50000,
+            "single_accumulated_charge": 100,
+            "single_discharge": 50,
+            "max_allowed_charge_power": 5000,
+            "max_allowed_discharge_power": 3000,
+            "max_allowed_charge_current": 200,
+            "max_allowed_dis_charge_current": 100,
+            "highest_cell_voltage": 4200,
+            "highest_voltage_id_cell": 3,
+            "lowest_cell_voltage": 4100,
+            "lowest_voltage_id_cell": 5,
+            "average_cell_voltage": 4150,
+            "highest_cell_temp": 40,
+            "highest_temp_id": 4,
+            "lowest_cell_temp": -5,
+            "lowest_temp_id": 6,
+            "average_cell_temperature": 20,
+            "cell_voltage_range": 100,
+            "cell_temperature_range": 45,
+            "cell_voltage": [4150,4130,4110...], // 数组长度固定为700
+            "cell_temp": [20,23,21...] // 数组长度固定为700
+        }
+    }]
 }
 ```
 {% endcode %}
