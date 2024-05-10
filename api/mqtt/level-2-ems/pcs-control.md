@@ -19,13 +19,7 @@
 </strong>  "mid": "ee2e8f09-b280-4e4d-bcb9-1529b703cfed",
   "type": "pcs_set",
   "data": {
-    "pcs_fault_reset":0,
-    "pcs_device_startup":0,
     "pcs_device_stop":1,
-    "pcs_remote_emergency_stop":0,
-    "pcs_reset_cumulative_charge":0,
-    "pcs_reset_cumulative_discharge":0,
-    "pcs_remote_local_setting":0
     },
   "sub_device_uid": "${SUB_DEVICE_UID}",
   "device_uid": "${DEVICE_UID}",
