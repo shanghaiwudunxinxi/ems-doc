@@ -23,7 +23,7 @@ description: V2
 
 * **payload - RegularReportSubEMSFire**
 
-<table><thead><tr><th width="178" align="center">参数</th><th width="112" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">fire_alarm_status</td><td align="center">int</td><td>false</td><td align="center">告警状态</td><td align="center">1</td></tr></tbody></table>
+<table><thead><tr><th width="178" align="center">参数</th><th width="112" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">fire_status</td><td align="center">int</td><td>false</td><td align="center">告警状态</td><td align="center">1</td></tr></tbody></table>
 
 *   **payload - RegularReportSubEMSAircon**
 
@@ -72,7 +72,7 @@ description: V2
         "type": "sub_ems_fire",
         "index": 0,
         "data": {
-            "fire_alarm_status": 1,
+            "fire_status": 1,
         }
     },{
         "type": "sub_ems_aircon", // "sub_ems_aircon" / "sub_ems_liquidcon"
