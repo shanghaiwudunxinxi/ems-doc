@@ -12,7 +12,7 @@
 
 * **Payload - data/eleMeter**
 
-<table><thead><tr><th width="199">参数</th><th>类型</th><th>是否必填</th><th>描述</th><th>样例</th></tr></thead><tbody><tr><td>id</td><td>uint</td><td>是</td><td>ID</td><td>1</td></tr><tr><td>station_name</td><td>str</td><td>是</td><td>站点名称</td><td>丽宝广场</td></tr><tr><td>proto_type</td><td>uint8</td><td>是</td><td>协议类型 1:modbus-tcp 2:modbus-rtu</td><td>1</td></tr><tr><td>slave_id</td><td>uint8</td><td>是</td><td>设备从站id</td><td></td></tr><tr><td>host</td><td>str</td><td>否</td><td>地址 (协议类型为1时必填)</td><td>192.168.0.1</td></tr><tr><td>port</td><td>uint16</td><td>否</td><td>端口 (协议类型为1时必填)</td><td>[0,65535]</td></tr><tr><td>com_addr</td><td>str</td><td>否</td><td>串口地址 (协议类型为2时必填)</td><td>/dev/ttyS1</td></tr><tr><td>com_no</td><td>uint</td><td>否</td><td>串口号 (协议类型为2时必填)</td><td>1</td></tr><tr><td>baud_rate</td><td>int</td><td>否</td><td>波特率 (协议类型为2时必填)</td><td>9600</td></tr><tr><td>data_bits</td><td>int</td><td>否</td><td>数据位 (协议类型为2时必填)</td><td>8</td></tr><tr><td>stop_bits</td><td>int</td><td>否</td><td>停止位 (协议类型为2时必填)</td><td>1</td></tr><tr><td>parity</td><td>string</td><td>否</td><td>校验位 (协议类型为2时必填)</td><td>N:无校验 E:奇校验 O:偶校验</td></tr><tr><td>name</td><td>str</td><td>是</td><td>设备名称</td><td>东区变压器</td></tr><tr><td>ele_device_type_id</td><td>uint</td><td>是</td><td>电表类型id</td><td>1</td></tr><tr><td>ele_device_type</td><td>ele_device_type</td><td>是</td><td>电表类型对象</td><td></td></tr><tr><td>pt</td><td>uint</td><td>是</td><td>电压互感</td><td>10</td></tr><tr><td>ct</td><td>uint</td><td>是</td><td>电流互感</td><td>10</td></tr><tr><td>direction</td><td>int</td><td>是</td><td>电表方向</td><td></td></tr><tr><td>running_status</td><td>uint8</td><td>是</td><td>运行状态</td><td>1</td></tr><tr><td>purpose</td><td>int</td><td>否</td><td>用途 1-关口表 2-计量表</td><td>1</td></tr></tbody></table>
+<table><thead><tr><th width="199">参数</th><th>类型</th><th>是否必填</th><th>描述</th><th>样例</th></tr></thead><tbody><tr><td>id</td><td>uint</td><td>是</td><td>ID</td><td>1</td></tr><tr><td>station_name</td><td>str</td><td>是</td><td>站点名称</td><td>丽宝广场</td></tr><tr><td>proto_type</td><td>uint8</td><td>是</td><td><p>协议类型 </p><p>1-modbus-tcp</p><p>2-modbus-rtu</p><p>6-dlt645-rtu</p><p>7-virtual-elec</p></td><td>1</td></tr><tr><td>slave_id</td><td>uint8</td><td>是</td><td>设备从站id</td><td></td></tr><tr><td>host</td><td>str</td><td>否</td><td>地址 (协议类型为1时必填)</td><td>192.168.0.1</td></tr><tr><td>port</td><td>uint16</td><td>否</td><td>端口 (协议类型为1时必填)</td><td>[0,65535]</td></tr><tr><td>com_addr</td><td>str</td><td>否</td><td>串口地址 (协议类型为2时必填)</td><td>/dev/ttyS1</td></tr><tr><td>com_no</td><td>uint</td><td>否</td><td>串口号 (协议类型为2时必填)</td><td>1</td></tr><tr><td>baud_rate</td><td>int</td><td>否</td><td>波特率 (协议类型为2时必填)</td><td>9600</td></tr><tr><td>data_bits</td><td>int</td><td>否</td><td>数据位 (协议类型为2时必填)</td><td>8</td></tr><tr><td>stop_bits</td><td>int</td><td>否</td><td>停止位 (协议类型为2时必填)</td><td>1</td></tr><tr><td>parity</td><td>string</td><td>否</td><td>校验位 (协议类型为2时必填)</td><td>N:无校验 E:奇校验 O:偶校验</td></tr><tr><td>name</td><td>str</td><td>是</td><td>设备名称</td><td>东区变压器</td></tr><tr><td>ele_device_type_id</td><td>uint</td><td>是</td><td>电表类型id</td><td>1</td></tr><tr><td>ele_device_type</td><td>ele_device_type</td><td>是</td><td>电表类型对象</td><td></td></tr><tr><td>pt</td><td>uint</td><td>是</td><td>电压互感</td><td>10</td></tr><tr><td>ct</td><td>uint</td><td>是</td><td>电流互感</td><td>10</td></tr><tr><td>direction</td><td>int</td><td>是</td><td>电表方向</td><td></td></tr><tr><td>running_status</td><td>uint8</td><td>是</td><td>运行状态</td><td>1</td></tr><tr><td>purpose</td><td>int</td><td>否</td><td>用途 1-关口表 2-计量表</td><td>1</td></tr><tr><td>associate_meters</td><td>[]<strong>eleMeter</strong></td><td>否</td><td>关联的电表</td><td>关联自身</td></tr></tbody></table>
 
 * **Payload示例**
 
@@ -20,32 +20,34 @@
 </strong><strong>  "trace_id": "577f5df0-65d6-432d-8aac-0116e9530152",
 </strong>  "mid": "ee2e8f09-b280-4e4d-bcb9-1529b703cfed",
   "type": "elemeter_info_details",
-  "data": {
-    "id": 1,
-    "proto_type": 1,
-    "proto_id": 3,
-    "slave_id": 2,
-    "host": "192.168.77.94",
-    "port": 5022,
-    "com_addr": "",
-    "com_no": 0,
-    "baud_rate": 0,
-    "data_bits": 0,
-    "stop_bits": 0,
-    "parity": "",
-    "uid": "",
-    "station_name": "",
-    "name": "test111",
-    "ele_device_type_id": 3,
-    "ele_device_type": {
-        "id": 0,
-        "name": ""
-    },
-    "running_status": 2,
-    "direction": 1,
-    "pt": 10,
-    "ct": 10,
-    "purpose": 0
+  "data":  {
+                  "id": 1,
+                  "proto_type": 1,
+                  "proto_id": 1,
+                  "slave_id": 1,
+                  "host": "192.168.77.210",
+                  "port": 1510,
+                  "com_addr": "",
+                  "com_no": 0,
+                  "baud_rate": 9600,
+                  "data_bits": 8,
+                  "stop_bits": 1,
+                  "parity": "N",
+                  "uid": "",
+                  "station_name": "测试站点",
+                  "name": "测试电表1",
+                  "ele_device_type_id": 1,
+                  "ele_device_type": {
+                      "id": 1,
+                      "name": "Acrel-ADW300"
+                  },
+                  "running_status": 1,
+                  "direction": 1,
+                  "pt": 1,
+                  "ct": 1,
+                  "purpose": 1,
+                  "meter_ids": null,
+                  "associate_meters": []
   },
   "sub_device_uid": "${SUB_DEVICE_UID}",
   "sub_device_id": 2,
@@ -97,24 +99,33 @@
   "reply": "3e681859-6917-4b9a-9afd-3f162cd185bd",
   "type": "elemeter_info_sync",
   "data": {
-    "id": 1,
-    "station_name": "",
-    "proto_type": 1,
-    "host": "172.16.24.111"
-    "port": 1808,
-    "slave_id": 1,
-    "name": "总电表",
-    "ele_device_type_id": 0,
-    "ele_device_type": {
-        "id": 0,
-        "name": ""
-    },
-    "running_status": 2,
-    "direction": -1,
-    "pt": 10,
-    "ct": 10,
-    "purpose": 2
-
+                  "id": 1,
+                  "proto_type": 1,
+                  "proto_id": 1,
+                  "slave_id": 1,
+                  "host": "192.168.77.210",
+                  "port": 1510,
+                  "com_addr": "",
+                  "com_no": 0,
+                  "baud_rate": 9600,
+                  "data_bits": 8,
+                  "stop_bits": 1,
+                  "parity": "N",
+                  "uid": "",
+                  "station_name": "测试站点",
+                  "name": "测试电表1",
+                  "ele_device_type_id": 1,
+                  "ele_device_type": {
+                      "id": 1,
+                      "name": "Acrel-ADW300"
+                  },
+                  "running_status": 1,
+                  "direction": 1,
+                  "pt": 1,
+                  "ct": 1,
+                  "purpose": 1,
+                  "meter_ids": null,
+                  "associate_meters": []
   },
   "sub_device_id": "${SUB_DEVICE_ID}",
   "device_uid": "${DEVICE_UID}",
@@ -163,25 +174,36 @@
 </strong>  "mid": "ee2e8f09-b280-4e4d-bcb9-1529b703cfed",
   "reply": "3e681859-6917-4b9a-9afd-3f162cd185bd",
   "type": "elemeter_info_list",
-  "data": [{
-    "id": 1,
-    "station_name": "",
-    "proto_type": 1,
-    "host": "172.16.24.111"
-    "port": 1808,
-    "slave_id": 1,
-    "name": "总电表",
-    "ele_device_type_id": 0,
-    "ele_device_type": {
-        "id": 0,
-        "name": ""
-    },
-    "running_status": 2,
-    "direction": -1,
-    "pt": 10,
-    "ct": 10,
-    "purpose": 2
-  }],
+  "data": [ {
+                  "id": 1,
+                  "proto_type": 1,
+                  "proto_id": 1,
+                  "slave_id": 1,
+                  "host": "192.168.77.210",
+                  "port": 1510,
+                  "com_addr": "",
+                  "com_no": 0,
+                  "baud_rate": 9600,
+                  "data_bits": 8,
+                  "stop_bits": 1,
+                  "parity": "N",
+                  "uid": "",
+                  "station_name": "测试站点",
+                  "name": "测试电表1",
+                  "ele_device_type_id": 1,
+                  "ele_device_type": {
+                      "id": 1,
+                      "name": "Acrel-ADW300"
+                  },
+                  "running_status": 1,
+                  "direction": 1,
+                  "pt": 1,
+                  "ct": 1,
+                  "purpose": 1,
+                  "meter_ids": null,
+                  "associate_meters": []
+                },
+],
   "sub_device_id": "${SUB_DEVICE_ID}",
   "device_uid": "${DEVICE_UID}",
   "timestamp": 1695265371000
