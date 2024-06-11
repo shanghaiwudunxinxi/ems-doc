@@ -192,10 +192,10 @@ description: V2
     "sub_device_id": 2,
     "device_uid": "xxxxxxxxxx",
     "timestamp": 1705980251899,
-    "data": {
+    "data": [{
         "type": "sub_ems_pcs",
         "index": 0,
-        "data": [{
+        "data": {
             "running_status": 2,
             "pcs_total_active_power": 2500,
             "pcs_active_power_phase_a": null,
@@ -235,8 +235,8 @@ description: V2
             "igbt_temp_phase_a": 0,
             "igbt_temp_phase_b": 0,
             "igbt_temp_phase_c": 0
-        }]
-    }
+        }
+    }]
 }
 ```
 {% endcode %}
