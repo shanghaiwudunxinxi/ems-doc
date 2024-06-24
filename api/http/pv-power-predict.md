@@ -2,9 +2,9 @@
 description: 查看、更新设备信息。
 ---
 
-# 光伏发电功率预测
+# VPP-分布式光伏发电功率预测
 
-## 光伏发电功率预测
+## 分布式光伏发电功率预测
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/power/pv-forecast`</mark>
