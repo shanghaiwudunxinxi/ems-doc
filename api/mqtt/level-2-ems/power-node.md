@@ -1,6 +1,6 @@
 # 支路设计
 
-## 上报防逆流过需策略
+## 上报支路设计
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`power_node/list`</mark>`/post`
@@ -95,7 +95,7 @@
 ```
 {% endcode %}
 
-## 平台请求同步防逆流过需策略
+## 平台请求同步支路设计
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`power_node/sync`</mark>`/command`
@@ -121,7 +121,7 @@
 }
 ```
 
-## 同步防逆流过需电策略响应
+## 同步支路设计响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`power_node/sync`</mark>`/result`
