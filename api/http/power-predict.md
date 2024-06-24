@@ -4,15 +4,15 @@ description: 查看、更新设备信息。
 
 # 功率预测
 
-## 根据更新时间范围获取设备列表
+## 获取24小时负荷功率预测
 
 * **Method：**`GET`
-* **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/device/by-time`</mark>
+* **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/power/load-forecast`</mark>
 * **接口描述：**根据更新时间获取设备列表
 * **请求**
   *   Query参数
 
-      <table><thead><tr><th>参数</th><th>类型<select><option value="47624d5c9393461e9a8ecece42e932a4" label="int" color="blue"></option></select></th><th data-type="checkbox">是否必填</th><th>描述</th><th width="123">范围</th><th>样例</th></tr></thead><tbody><tr><td>start_time</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>开始时间戳（单位：秒）</td><td>[0, ∞]</td><td>1696089600</td></tr><tr><td>end_time</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>结束时间戳（单位：秒）</td><td>[0, ∞]</td><td>1697179204</td></tr><tr><td>page-size</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>每页设备数量（默认值为50）</td><td>[0, ∞]</td><td>50</td></tr><tr><td>page</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>页码（默认值 1）</td><td>[0, ∞]</td><td>1</td></tr></tbody></table>
+      <table><thead><tr><th>参数</th><th>类型<select><option value="47624d5c9393461e9a8ecece42e932a4" label="int" color="blue"></option></select></th><th data-type="checkbox">是否必填</th><th>描述</th><th width="123">范围</th><th>样例</th></tr></thead><tbody><tr><td>period</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>开始时间戳（单位：秒）</td><td>[0, ∞]</td><td>1696089600</td></tr><tr><td>end_time</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>结束时间戳（单位：秒）</td><td>[0, ∞]</td><td>1697179204</td></tr><tr><td>page-size</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>每页设备数量（默认值为50）</td><td>[0, ∞]</td><td>50</td></tr><tr><td>page</td><td><span data-option="47624d5c9393461e9a8ecece42e932a4">int</span></td><td>false</td><td>页码（默认值 1）</td><td>[0, ∞]</td><td>1</td></tr></tbody></table>
   * 示例
 
 {% tabs %}
