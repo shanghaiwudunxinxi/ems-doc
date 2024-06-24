@@ -20,6 +20,7 @@
   * [【未上线】二级充放电策略](api/http/level2-charge-strategy.md)
   * [【未上线】二级保护策略](api/http/level2-protection-strategy.md)
   * [【未上线】二级子设备故障](api/http/sub-device-fault.md)
+  * [功率预测](api/http/power-predict.md)
 * [MQTT](api/mqtt/README.md)
   * [设备事件](api/mqtt/device-event.md)
   * [充放电策略](api/mqtt/charge-policy.md)
