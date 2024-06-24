@@ -2,9 +2,9 @@
 description: 查看、更新设备信息。
 ---
 
-# 用电负荷功率预测
+# VPP-日前负荷预测
 
-## 用电负荷功率预测
+## 日前负荷功率预测
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/power/load-forecast`</mark>
