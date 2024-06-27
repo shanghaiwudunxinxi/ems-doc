@@ -37,5 +37,5 @@
     * [手动控制-冷却系统远程控制](api/mqtt/level-2-ems/condition-control.md)
     * [故障告警](api/mqtt/level-2-ems/fault-alarm.md)
     * [支路设计](api/mqtt/level-2-ems/power-node.md)
-    * [设备事件](api/mqtt/level-2-ems/device-event.md)
+    * [\[Deprecated\]设备事件](api/mqtt/level-2-ems/device-event.md)
     * [设备事件V2](api/mqtt/level-2-ems/device-event-1.md)
