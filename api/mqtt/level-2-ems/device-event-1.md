@@ -15,7 +15,7 @@ description: V2
     <table><thead><tr><th width="173" align="center">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td align="center">mid</td><td><span data-option="36cc16022bbb4c7b93fe3a347e4eee85">UUID</span></td><td>true</td><td>消息ID</td><td>-</td><td>3e681859-6917-4b9a-9afd-3f162cd185bd</td></tr><tr><td align="center">type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>消息类型</td><td>report_regular</td><td>report_regular</td></tr><tr><td align="center">data</td><td><span data-option="005ee50172ec4f44a83308b0bfb12d48">data</span></td><td>true</td><td>消息内容</td><td>-</td><td>见<strong>Payload - data</strong></td></tr><tr><td align="center">sub_device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>false</td><td>子设备UID，仅二级替单个子设备上报时需要该字段</td><td>-</td><td>jHODSda39</td></tr><tr><td align="center">sub_device_id</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>false</td><td>子设备ID，仅二级替单个子设备上报时需要该字段</td><td>(0, ∞)</td><td>2</td></tr><tr><td align="center">device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备ID</td><td>-</td><td>iYRkfVpi77</td></tr><tr><td align="center">timestamp</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>消息时间戳（单位：毫秒）</td><td>(0, ∞)</td><td>1696837112000</td></tr></tbody></table>
 *   **Payload - data/ReportRegular**
 
-    <table><thead><tr><th width="97" align="center">参数</th><th width="263" align="center">类型</th><th width="89" data-type="checkbox">是否必填</th><th width="220">描述</th><th>样例</th></tr></thead><tbody><tr><td align="center">type</td><td align="center">str</td><td>true</td><td><p>sub_ems_fire: 一级EMS设备火警数据</p><p>sub_ems_aircon:一级EMS设备风冷数据</p><p>sub_ems_liquidcon:一级EMS设备液冷数据</p><p>sub_ems_bms: 一级EMS设备BMS数据</p><p>sub_ems_pcs: 一级EMS设备PCS数据<br>sub_elemeter: 电表数据<br>sub_elemeters: 电表数据批量<br>ems: 二级ems数据</p></td><td>"ems"</td></tr><tr><td align="center">index</td><td align="center">int</td><td>true</td><td>编号</td><td>0</td></tr><tr><td align="center">data</td><td align="center"><p>[](<strong>SubEMSFire/SubEMSAircon/SubEMSLiquid)/</strong></p><p><strong>[]SubEMSBMS/</strong></p><p><strong>[]SubEMSPCS/</strong></p><p><strong>EMSData/</strong></p><p><strong>SubEleMeterData/</strong></p><p><strong>SubEleMetersData</strong></p></td><td>true</td><td><p>一级EMS火警/风冷/液冷数据组合</p><p>一级EMS设备BMS数据</p><p>一级EMS设备PCS数据</p><p>二级EMS数据</p><p>电表数据</p><p>电表组合数据</p></td><td>-</td></tr></tbody></table>
+    <table><thead><tr><th width="97" align="center">参数</th><th width="263" align="center">类型</th><th width="89" data-type="checkbox">是否必填</th><th width="220">描述</th><th>样例</th></tr></thead><tbody><tr><td align="center">type</td><td align="center">str</td><td>true</td><td><p>sub_ems_fire: 一级EMS设备火警数据</p><p>sub_ems_aircon:一级EMS设备风冷数据</p><p>sub_ems_liquidcon:一级EMS设备液冷数据</p><p>sub_ems_bms: 一级EMS设备BMS数据</p><p>sub_ems_pcs: 一级EMS设备PCS数据<br>sub_elemeter: 电表数据<br>sub_elemeters: 电表数据批量<br>ems: 二级ems数据</p></td><td>"ems"</td></tr><tr><td align="center">index</td><td align="center">int</td><td>true</td><td>编号</td><td>0</td></tr><tr><td align="center">data</td><td align="center"><p>[](<strong>SubEMSFire/SubEMSAircon/SubEMSLiquid)/</strong></p><p><strong>[]SubEMSBMS/</strong></p><p><strong>[]SubEMSPCS/</strong></p><p><strong>EMSData/</strong></p><p><strong>SubEleMetersData</strong></p></td><td>true</td><td><p>一级EMS火警/风冷/液冷数据组合</p><p>一级EMS设备BMS数据</p><p>一级EMS设备PCS数据</p><p>二级EMS数据</p><p>电表数据</p></td><td>-</td></tr></tbody></table>
 *   **payload - RegularReportSubEMSFire**
 
     <table><thead><tr><th width="178" align="center">参数</th><th width="112" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">fire_status</td><td align="center">int</td><td>false</td><td align="center">告警状态</td><td align="center">1</td></tr></tbody></table>
@@ -255,64 +255,6 @@ description: V2
                 "current_chargeable_energy": 4.4,
                 "current_dischargeable_energy": 2.2
             }
-        }
-    }
-}
-```
-
-* **Payload示例-sub\_elemeter**
-
-```json
-{
-    "trace_id": "2f492a12-5408-40b3-b347-ed64a3723050",
-    "mid": "d39835f5-2087-4601-8a12-85bb2bceb690",
-    "type": "report_regular",
-    "sub_device_uid": "a8TJthsYq3J4hjz",
-    "sub_device_id": 2,
-    "device_uid": "xxxxxxxxxx",
-    "timestamp": 1705563840345,
-    "data": {
-        "type": "sub_elemeter",
-        "data": {
-            "id": 2,
-            "uid": "",
-            "purpose": 1,
-            "total_active_power": 100.5,
-            "active_power_phase_a": 101.5,
-            "active_power_phase_b": 102.5,
-            "active_power_phase_c": 103.5,
-            "total_reactive_power": 104.5,
-            "reactive_power_phase_a": 105.5,
-            "reactive_power_phase_b": 106.5,
-            "reactive_power_phase_c": 107.5,
-            "total_apparent_power": 108.5,
-            "apparent_power_phase_a": 109.5,
-            "apparent_power_phase_b": 110.5,
-            "apparent_power_phase_c": 111.5,
-            "total_power_factor": 112.5,
-            "power_factor_phase_a": 113.5,
-            "power_factor_phase_b": 114.5,
-            "power_factor_phase_c": 115.5,
-            "voltage_phase_a": 116.5,
-            "voltage_phase_b": 117.5,
-            "voltage_phase_c": 118.5,
-            "current_phase_a": 119.5,
-            "current_phase_b": 120.5,
-            "current_phase_c": 121.5,
-            "frequency_grid": 122.5,
-            "frequency_phase_a": 123.5,
-            "frequency_phase_b": 124.5,
-            "frequency_phase_c": 125.5,
-            "total_forward_active_energy": 126.5,
-            "forward_active_energy_sharp": 127.5,
-            "forward_active_energy_peak": 128.5,
-            "forward_active_energy_flat": 129.5,
-            "forward_active_energy_valley": 130.5,
-            "total_reverse_active_energy": 131.5,
-            "reverse_active_energy_sharp": 132.5,
-            "reverse_active_energy_peak": 133.5,
-            "reverse_active_energy_flat": 134.5,
-            "reverse_active_energy_valley": 135.5
         }
     }
 }
