@@ -29,7 +29,7 @@
     * [子设备信息](api/mqtt/level-2-ems/sub-device.md)
     * [电表设备信息](api/mqtt/level-2-ems/sub-elemeter.md)
     * [充放电策略](api/mqtt/level-2-ems/charge-strategy.md)
-    * [防逆流过需策略](api/mqtt/level-2-ems/overdemand.md)
+    * [需量管理与防逆流策略](api/mqtt/level-2-ems/overdemand.md)
     * [放电深度保策略](api/mqtt/level-2-ems/charge-depth.md)
     * [安全保护策略](api/mqtt/level-2-ems/safety.md)
     * [手动控制-PCS远程控制](api/mqtt/level-2-ems/pcs-control.md)
