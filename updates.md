@@ -41,7 +41,7 @@
 ## 2023.11.28
 
 * 更新接口
-  * [设备事件](api/mqtt/device-event.md)系数处理
+  * [设备事件](api/mqtt/emu/device-event.md)系数处理
 
 ## 2023.11.21
 
