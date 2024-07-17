@@ -328,3 +328,116 @@ description: V2
     ]
 }
 ```
+
+* **Payload示例-**photovoltaic\_elemeter
+
+```json
+{
+    "trace_id": "144d6384-c32a-4221-ad44-5d0063128441",
+    "mid": "f76612ce-b8aa-4bab-8138-7e7fc74bcbcf",
+    "type": "report_regular",
+    "sub_device_id": 1,
+    "device_uid": "",
+    "timestamp": 1721180810009,
+    "data": [
+        {
+            "type": "photovoltaic_meter",
+            "index": 0,
+            "data": {
+                "total_active_power": 2359.333,
+                "active_power_phase_a": 1966.111,
+                "active_power_phase_b": 2097.185,
+                "active_power_phase_c": 2228.259,
+                "total_reactive_power": 2883.629,
+                "reactive_power_phase_a": 2490.407,
+                "reactive_power_phase_b": 2621.481,
+                "reactive_power_phase_c": 2752.555,
+                "total_apparent_power": 3407.925,
+                "apparent_power_phase_a": 3014.703,
+                "apparent_power_phase_b": 3145.777,
+                "apparent_power_phase_c": 3276.851,
+                "total_power_factor": 0.057,
+                "power_factor_phase_a": 0.054,
+                "power_factor_phase_b": 0.055,
+                "power_factor_phase_c": 0.056,
+                "voltage_phase_a": 2,
+                "voltage_phase_b": 2.1,
+                "voltage_phase_c": 2.2,
+                "current_phase_a": 0.26,
+                "current_phase_b": 0.27,
+                "current_phase_c": 0.28,
+                "frequency_grid": 0.59,
+                "frequency_phase_a": null,
+                "frequency_phase_b": null,
+                "frequency_phase_c": null,
+                "total_active_energy": null,
+                "total_active_energy_1": null,
+                "total_active_energy_2": null,
+                "total_active_energy_3": null,
+                "total_active_energy_4": null,
+                "total_forward_active_energy": 0.99,
+                "forward_active_energy_sharp": 271978.56,
+                "forward_active_energy_peak": 273289.3,
+                "forward_active_energy_flat": 274600.04,
+                "forward_active_energy_valley": 275910.78,
+                "forward_active_energy_1": 271978.56,
+                "forward_active_energy_2": 273289.3,
+                "forward_active_energy_3": 274600.04,
+                "forward_active_energy_4": 275910.78,
+                "total_reverse_active_energy": 0.88,
+                "reverse_active_energy_sharp": 277221.52,
+                "reverse_active_energy_peak": 278532.26,
+                "reverse_active_energy_flat": 279843,
+                "reverse_active_energy_valley": 281153.74,
+                "reverse_active_energy_1": 277221.52,
+                "reverse_active_energy_2": 278532.26,
+                "reverse_active_energy_3": 279843,
+                "reverse_active_energy_4": 281153.74
+            }
+        }
+    ]
+}
+```
+
+* **Payload示例-**photovoltaic\_inverter
+
+```json
+{
+    "trace_id": "d882e331-ba8b-4b7a-8ab7-0690786844c8",
+    "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
+    "type": "report_regular",
+    "sub_device_id": 1,
+    "device_uid": "",
+    "timestamp": 1721119850008,
+    "data": [
+        {
+            "type": "photovoltaic_inverter",
+            "index": 0,
+            "data": {
+                "alternating_current_voltage_a": 77.2,
+                "alternating_current_voltage_b": 77.3,
+                "alternating_current_voltage_c": 77.4,
+                "alternating_current_current_a": 77.5,
+                "alternating_current_current_b": 77.6,
+                "alternating_current_current_c": 77.7,
+                "direct_current_voltage": 79.6,
+                "direct_current_current": null,
+                "direct_current_input_power": null,
+                "alternating_current_output_power": 55706.451,
+                "total_active_power": null,
+                "total_reactive_power": 58524.542,
+                "alternating_current_output_frequency": 6671666.7,
+                "inverter_efficiency": null,
+                "inverter_internal_temp": 78.3,
+                "inverter_heatsink_temp": null,
+                "running_status": 0,
+                "fault_status": 785,
+                "alternating_current_output_power_factor": 0.886,
+                "ambient_temp": null,
+                "irradiance": null
+            }
+        }
+    ]
+}
+```
+
