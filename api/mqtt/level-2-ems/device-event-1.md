@@ -49,29 +49,29 @@ description: V2
 * **payload - PhotovoltaicEleMeterData  与SubEleMeterData一致**
 * **payload - PhotovoltaicInverterData**
 
-| 参数                                          | 类型      | 是否必填 | 描述             | 样例   |
-| ------------------------------------------- | ------- | ---- | -------------- | ---- |
-| direct\_current\_voltage                    | float64 | 否    | 直流侧（DC）电压（V）   | 500  |
-| direct\_current\_current                    | float64 | 否    | 直流侧（DC）电流（A）   | 100  |
-| alternating\_current\_voltage\_a            | float64 | 否    | 交流侧（AC）A相电压（V） | 230  |
-| alternating\_current\_voltage\_b            | float64 | 否    | 交流侧（AC）B相电压（V） | 230  |
-| alternating\_current\_voltage\_c            | float64 | 否    | 交流侧（AC）C相电压（V） | 230  |
-| alternating\_current\_current\_a            | float64 | 否    | 交流侧（AC）A相电流（A） | 50   |
-| alternating\_current\_current\_b            | float64 | 否    | 交流侧（AC）B相电流（A） | 50   |
-| alternating\_current\_current\_c            | float64 | 否    | 交流侧（AC）C相电流（A） | 50   |
-| direct\_current\_input\_power               | float64 | 否    | 直流输入功率（kW）     | 50   |
-| alternating\_current\_output\_power         | float64 | 否    | 交流输出功率（kW）     | 45   |
-| total\_active\_power                        | float64 | 否    | 有功功率（kW）       | 40   |
-| total\_reactive\_power                      | float64 | 否    | 无功功率（kVar）     | 10   |
-| alternating\_current\_output\_frequency     | float64 | 否    | 交流输出频率（Hz）     | 50   |
-| inverter\_efficiency                        | float64 | 否    | 逆变器效率          | 98.5 |
-| inverter\_internal\_temp                    | float64 | 否    | 逆变器内部温度（℃）     | 45   |
-| inverter\_heatsink\_temp                    | float64 | 否    | 散热器温度（℃）       | 50   |
-| inverter\_running\_status                   | int     | 否    | 当前运行状态         | 1    |
-| fault\_status                               | int     | 否    | 故障代码           | 0    |
-| alternating\_current\_output\_power\_factor | float64 | 否    | 交流输出功率因数       | 0.95 |
-| ambient\_temp                               | float64 | 否    | 环境温度（℃）        | 30   |
-| irradiance                                  | float64 | 否    | 辐射强度（W/m²）     | 800  |
+| 参数                                          | 类型      | 是否必填 | 描述                                                            | 样例   |
+| ------------------------------------------- | ------- | ---- | ------------------------------------------------------------- | ---- |
+| direct\_current\_voltage                    | float64 | 否    | 直流侧（DC）电压（V）                                                  | 500  |
+| direct\_current\_current                    | float64 | 否    | 直流侧（DC）电流（A）                                                  | 100  |
+| alternating\_current\_voltage\_a            | float64 | 否    | 交流侧（AC）A相电压（V）                                                | 230  |
+| alternating\_current\_voltage\_b            | float64 | 否    | 交流侧（AC）B相电压（V）                                                | 230  |
+| alternating\_current\_voltage\_c            | float64 | 否    | 交流侧（AC）C相电压（V）                                                | 230  |
+| alternating\_current\_current\_a            | float64 | 否    | 交流侧（AC）A相电流（A）                                                | 50   |
+| alternating\_current\_current\_b            | float64 | 否    | 交流侧（AC）B相电流（A）                                                | 50   |
+| alternating\_current\_current\_c            | float64 | 否    | 交流侧（AC）C相电流（A）                                                | 50   |
+| direct\_current\_input\_power               | float64 | 否    | 直流输入功率（kW）                                                    | 50   |
+| alternating\_current\_output\_power         | float64 | 否    | 交流输出功率（kW）                                                    | 45   |
+| total\_active\_power                        | float64 | 否    | 有功功率（kW）                                                      | 40   |
+| total\_reactive\_power                      | float64 | 否    | 无功功率（kVar）                                                    | 10   |
+| alternating\_current\_output\_frequency     | float64 | 否    | 交流输出频率（Hz）                                                    | 50   |
+| inverter\_efficiency                        | float64 | 否    | 逆变器效率                                                         | 98.5 |
+| inverter\_internal\_temp                    | float64 | 否    | 逆变器内部温度（℃）                                                    | 45   |
+| inverter\_heatsink\_temp                    | float64 | 否    | 散热器温度（℃）                                                      | 50   |
+| inverter\_running\_status                   | int     | 否    | <p>当前运行状态 </p><p>1-停机 </p><p>2-待机 </p><p>5-运行 </p><p>7-故障</p> | 1    |
+| fault\_status                               | int     | 否    | 故障代码                                                          | 0    |
+| alternating\_current\_output\_power\_factor | float64 | 否    | 交流输出功率因数                                                      | 0.95 |
+| ambient\_temp                               | float64 | 否    | 环境温度（℃）                                                       | 30   |
+| irradiance                                  | float64 | 否    | 辐射强度（W/m²）                                                    | 800  |
 
 * **Payload示例-sub\_ems\_fire和sub\_ems\_aircon/sub\_ems\_liquidcon组合数据**
 
