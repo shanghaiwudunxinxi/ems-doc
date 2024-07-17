@@ -18,7 +18,7 @@ description: V2
     <table><thead><tr><th width="97" align="center">参数</th><th width="263" align="center">类型</th><th width="89" data-type="checkbox">是否必填</th><th width="220">描述</th><th>样例</th></tr></thead><tbody><tr><td align="center">type</td><td align="center">str</td><td>true</td><td><p>sub_ems_fire: 一级EMS设备火警数据</p><p>sub_ems_aircon:一级EMS设备风冷数据</p><p>sub_ems_liquidcon:一级EMS设备液冷数据</p><p>sub_ems_bms: 一级EMS设备BMS数据</p><p>sub_ems_pcs: 一级EMS设备PCS数据<br>sub_elemeter: 电表数据<br>sub_elemeters: 电表数据批量<br>ems: 二级ems数据</p></td><td>"ems"</td></tr><tr><td align="center">index</td><td align="center">int</td><td>true</td><td>编号</td><td>0</td></tr><tr><td align="center">data</td><td align="center"><p>[](<strong>SubEMSFire/SubEMSAircon/SubEMSLiquid)/</strong></p><p><strong>[]SubEMSBMS/</strong></p><p><strong>[]SubEMSPCS/</strong></p><p><strong>EMSData/</strong></p><p><strong>[]SubEleMeterData/</strong></p><p><strong>PhotovoltaicMeter/</strong></p><p><strong>PhotovoltaicInverter</strong></p></td><td>true</td><td><p>一级EMS火警/风冷/液冷数据组合</p><p>一级EMS设备BMS数据</p><p>一级EMS设备PCS数据</p><p>二级EMS数据</p><p>电表数据</p><p>光伏电表类型</p><p>光伏逆变器类型</p></td><td>-</td></tr></tbody></table>
 *   **payload - RegularReportSubEMSFire**
 
-    <table><thead><tr><th width="178" align="center">参数</th><th width="112" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">fire_status</td><td align="center">int</td><td>false</td><td align="center">告警状态</td><td align="center">1</td></tr></tbody></table>
+    <table><thead><tr><th width="178" align="center">参数</th><th width="112" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">fire_smoke_alarm_status</td><td align="center">int</td><td>false</td><td align="center">烟雾传感器报警状态: 0-无烟雾告警，1-有烟感告警</td><td align="center">1</td></tr><tr><td align="center">fire_flammable_gas_alarm_status</td><td align="center">int</td><td>false</td><td align="center">可燃气体传感器报警状态: 0-无可燃气体告警，1-有可燃气体告警</td><td align="center">1</td></tr><tr><td align="center">fire_safety_equipments_status</td><td align="center">int</td><td>false</td><td align="center">消防装置状态: 0-正常（无动作）；1、被启动（火警</td><td align="center">1</td></tr><tr><td align="center">fire_safety_system</td><td align="center">int</td><td>false</td><td align="center">0-正常;1-故障</td><td align="center">1</td></tr><tr><td align="center">fire_temperature_sensor</td><td align="center">float</td><td>false</td><td align="center">温度传感器</td><td align="center"></td></tr><tr><td align="center">fire_humidity_sensor</td><td align="center">float</td><td>false</td><td align="center">湿度传感器</td><td align="center"></td></tr></tbody></table>
 *   **payload - RegularReportSubEMSAircon**
 
     <table><thead><tr><th width="178" align="center">参数</th><th width="112" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">machine_status</td><td align="center">int</td><td>false</td><td align="center">整机状态<br>0-停止<br>1-运行</td><td align="center"></td></tr><tr><td align="center">cooling_status</td><td align="center">int</td><td>false</td><td align="center">制冷<br>0-停止<br>1-运行</td><td align="center"></td></tr><tr><td align="center">heating_status</td><td align="center">int</td><td>false</td><td align="center">制热<br>0-停止<br>1-运行</td><td align="center"></td></tr><tr><td align="center">outdoor_temp</td><td align="center">float</td><td>false</td><td align="center">环境温度/室外温度（单位：℃）</td><td align="center"></td></tr><tr><td align="center">coil_temp</td><td align="center">float</td><td>false</td><td align="center">盘管温度（单位：℃）</td><td align="center"></td></tr><tr><td align="center">indoor_temp</td><td align="center">float</td><td>false</td><td align="center">室内温度（单位：℃）</td><td align="center"></td></tr><tr><td align="center">exhaust_temp</td><td align="center">float</td><td>false</td><td align="center">排气温度（单位：℃）</td><td align="center"></td></tr><tr><td align="center">cooling_point</td><td align="center">float</td><td>false</td><td align="center">制冷点（单位：℃）</td><td align="center"></td></tr><tr><td align="center">heating_point</td><td align="center">float</td><td>false</td><td align="center">加热点（单位：℃）</td><td align="center"></td></tr></tbody></table>
@@ -72,6 +72,14 @@ description: V2
 | alternating\_current\_output\_power\_factor | float64 | 否    | 交流输出功率因数                                                      | 0.95 |
 | ambient\_temp                               | float64 | 否    | 环境温度（℃）                                                       | 30   |
 | irradiance                                  | float64 | 否    | 辐射强度（W/m²）                                                    | 800  |
+
+* **payload - AlternatingChargePailData**
+
+<table><thead><tr><th width="180" align="center">参数</th><th width="110" align="center">类型</th><th width="99" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">total_active</td><td align="center">float</td><td>false</td><td align="center">总有功功率（单位：kW）</td><td align="center">100.5</td></tr><tr><td align="center">active_power_phase_a</td><td align="center">float</td><td>false</td><td align="center">A相有功功率（单位：kW）</td><td align="center">101.5</td></tr><tr><td align="center">active_power_phase_b</td><td align="center">float</td><td>false</td><td align="center">B相有功功率（单位：kW）</td><td align="center">102.5</td></tr><tr><td align="center">active_power_phase_c</td><td align="center">float</td><td>false</td><td align="center">C相有功功率（单位：kW）</td><td align="center">103.5</td></tr><tr><td align="center">total_reactive_power</td><td align="center">float</td><td>false</td><td align="center">总无功功率（单位：kVar）</td><td align="center">104.5</td></tr><tr><td align="center">reactive_power_phase_a</td><td align="center">float</td><td>false</td><td align="center">A相无功功率（单位：kVar）</td><td align="center">105.5</td></tr><tr><td align="center">reactive_power_phase_b</td><td align="center">float</td><td>false</td><td align="center">B相无功功率（单位：kVar）</td><td align="center">106.5</td></tr><tr><td align="center">reactive_power_phase_c</td><td align="center">float</td><td>false</td><td align="center">C相无功功率（单位：kVar）</td><td align="center">107.5</td></tr><tr><td align="center">total_apparent_power</td><td align="center">float</td><td>false</td><td align="center">总视在功率（单位：kVar）</td><td align="center">108.5</td></tr><tr><td align="center">apparent_power_phase_a</td><td align="center">float</td><td>false</td><td align="center">A相视在功率（单位：kVA）</td><td align="center">109.5</td></tr><tr><td align="center">apparent_power_phase_b</td><td align="center">float</td><td>false</td><td align="center">B相视在功率（单位：kVA）</td><td align="center">110.5</td></tr><tr><td align="center">apparent_power_phase_c</td><td align="center">float</td><td>false</td><td align="center">C相视在功率（单位：kVA）</td><td align="center">111.5</td></tr><tr><td align="center">total_power_factor</td><td align="center">float</td><td>false</td><td align="center">总功率因数</td><td align="center">112.5</td></tr><tr><td align="center">power_factor_phase_a</td><td align="center">float</td><td>false</td><td align="center">A相功率因数</td><td align="center">113.5</td></tr><tr><td align="center">power_factor_phase_b</td><td align="center">float</td><td>false</td><td align="center">B相功率因数</td><td align="center">114.5</td></tr><tr><td align="center">power_factor_phase_c</td><td align="center">float</td><td>false</td><td align="center">C相功率因数</td><td align="center">115.5</td></tr><tr><td align="center">a_phase_voltage</td><td align="center">float</td><td>false</td><td align="center">A相电压（单位：V）</td><td align="center">116.5</td></tr><tr><td align="center">b_phase_voltage</td><td align="center">float</td><td>false</td><td align="center">B相电压（单位：V）</td><td align="center">117.5</td></tr><tr><td align="center">c_phase_voltage</td><td align="center">float</td><td>false</td><td align="center">C相电压（单位：V）</td><td align="center">118.5</td></tr><tr><td align="center">a_phase_current</td><td align="center">float</td><td>false</td><td align="center">A相电流（单位：A）</td><td align="center">119.5</td></tr><tr><td align="center">b_phase_current</td><td align="center">float</td><td>false</td><td align="center">B相电流（单位：A）</td><td align="center">120.5</td></tr><tr><td align="center">c_phase_current</td><td align="center">float</td><td>false</td><td align="center">C相电流（单位：A）</td><td align="center">121.5</td></tr><tr><td align="center">frequency_grid</td><td align="center">float</td><td>false</td><td align="center">电网总频率（单位：Hz）</td><td align="center">122.5</td></tr><tr><td align="center">frequency_phase_a</td><td align="center">float</td><td>false</td><td align="center">A相频率（单位：Hz）</td><td align="center">123.5</td></tr><tr><td align="center">frequency_phase_b</td><td align="center">float</td><td>false</td><td align="center">B相频率（单位：Hz）</td><td align="center">124.5</td></tr><tr><td align="center">frequency_phase_c</td><td align="center">float</td><td>false</td><td align="center">C相频率（单位：Hz）</td><td align="center">125.5</td></tr><tr><td align="center">total_electric_energy</td><td align="center">float</td><td>false</td><td align="center">累计并入电网总电能）</td><td align="center">123.5</td></tr><tr><td align="center">current_electric_energy</td><td align="center">float</td><td>false</td><td align="center">当前并入电网电能</td><td align="center">123.5</td></tr></tbody></table>
+
+* **payload - DirectChargePailData**
+
+<table><thead><tr><th width="180" align="center">参数</th><th width="110" align="center">类型</th><th width="99" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">input_power</td><td align="center">float</td><td>false</td><td align="center">输入功率</td><td align="center">100.5</td></tr><tr><td align="center">output_power</td><td align="center">float</td><td>false</td><td align="center">输出功率</td><td align="center">101.5</td></tr><tr><td align="center">input_voltage</td><td align="center">float</td><td>false</td><td align="center">输入电压</td><td align="center">102.5</td></tr><tr><td align="center">output_voltage</td><td align="center">float</td><td>false</td><td align="center">输出电压</td><td align="center">103.5</td></tr><tr><td align="center">input_current</td><td align="center">float</td><td>false</td><td align="center">输入电流</td><td align="center">104.5</td></tr><tr><td align="center">output_current</td><td align="center">float</td><td>false</td><td align="center">输出电流</td><td align="center">105.5</td></tr><tr><td align="center">total_apparent_power</td><td align="center">float</td><td>false</td><td align="center">总视在功率（单位：kVar）</td><td align="center">108.5</td></tr><tr><td align="center">total_power_factor</td><td align="center">float</td><td>false</td><td align="center">总功率因数</td><td align="center">112.5</td></tr><tr><td align="center">total_electric_energy</td><td align="center">float</td><td>false</td><td align="center">累计充电电量</td><td align="center">113.5</td></tr><tr><td align="center">current_electric_energy</td><td align="center">float</td><td>false</td><td align="center">当前充电电量</td><td align="center">114.5</td></tr><tr><td align="center">total_active</td><td align="center">float</td><td>false</td><td align="center">总有功功率</td><td align="center">114.5</td></tr><tr><td align="center">total_reactive_power</td><td align="center">float</td><td>false</td><td align="center">总无功功率</td><td align="center">115.5</td></tr><tr><td align="center">a_phase_voltage</td><td align="center">float</td><td>false</td><td align="center">A相电压（单位：V）</td><td align="center">116.5</td></tr><tr><td align="center">b_phase_voltage</td><td align="center">float</td><td>false</td><td align="center">B相电压（单位：V）</td><td align="center">117.5</td></tr><tr><td align="center">c_phase_voltage</td><td align="center">float</td><td>false</td><td align="center">C相电压（单位：V）</td><td align="center">118.5</td></tr><tr><td align="center">frequency_grid</td><td align="center">float</td><td>false</td><td align="center">电网总频率（单位：Hz）</td><td align="center">122.5</td></tr></tbody></table>
 
 * **Payload示例-sub\_ems\_fire和sub\_ems\_aircon/sub\_ems\_liquidcon组合数据**
 
@@ -428,10 +436,9 @@ description: V2
 
 * **Payload示例-**photovoltaic\_inverter
 
-```json
-{
-    "trace_id": "d882e331-ba8b-4b7a-8ab7-0690786844c8",
-    "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong><strong>    "trace_id": "d882e331-ba8b-4b7a-8ab7-0690786844c8",
+</strong>    "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
     "type": "report_regular",
     "sub_device_id": 1,
     "device_uid": "",
@@ -466,5 +473,90 @@ description: V2
         }
     ]
 }
+</code></pre>
+
+**Payload示例- AlternatingChargePail**
+
+```
+{
+    "trace_id": "d882e331-ba8b-4b7a-8ab7-0690786844c8",
+    "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
+    "type": "report_regular",
+    "sub_device_id": 1,
+    "device_uid": "",
+    "timestamp": 1721119850008,
+    "data": [
+        {
+            "type": "alternating_pail",
+            "index": 0,
+            "data": {
+                    "a_phase_voltage": 1.1,
+                    "b_phase_voltage": 2.2,
+                    "c_phase_voltage": 3.3,
+                    "a_phase_current": 0.44,
+                    "b_phase_current": 0.55,
+                    "c_phase_current": 0.66,
+                    "total_active": 50,
+                    "active_power_phase_a": 0.099,
+                    "active_power_phase_b": 0.099,
+                    "active_power_phase_c": 0.099,
+                    "total_reactive_power": 0.123,
+                    "reactive_power_phase_a": 0.099,
+                    "reactive_power_phase_b": 0.099,
+                    "reactive_power_phase_c": 0.099,
+                    "total_apparent_power": 0.234,
+                    "apparent_power_phase_a": 0.099,
+                    "apparent_power_phase_b": 0.099,
+                    "apparent_power_phase_c": 0.099,
+                    "total_power_factor": 8.88,
+                    "power_factor_phase_a": 5.55,
+                    "power_factor_phase_b": 6.66,
+                    "power_factor_phase_c": 7.77,
+                    "frequency_grid": 50,
+                    "frequency_phase_a": null,
+                    "frequency_phase_b": null,
+                    "frequency_phase_c": null,
+                    "total_electric_energy": 0,
+                    "current_electric_energy": 0
+            }
+        }
+    ]
+}
 ```
 
+**Payload示例- DirectChargePail**
+
+```
+{
+    "trace_id": "d882e331-ba8b-4b7a-8ab7-0690786844c8",
+    "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
+    "type": "report_regular",
+    "sub_device_id": 1,
+    "device_uid": "",
+    "timestamp": 1721119850008,
+    "data": [
+        {
+            "type": "direct_pail",
+            "index": 0,
+            "data": {
+                    "input_power": 0,
+                    "output_power": 0,
+                    "input_voltage": 0,
+                    "output_voltage": 0,
+                    "input_current": 0,
+                    "output_current": 0,
+                    "a_phase_voltage": 0,
+                    "b_phase_voltage": 0,
+                    "c_phase_voltage": 0,
+                    "total_electric_energy": 0,
+                    "current_electric_energy": 0,
+                    "frequency_grid": 0,
+                    "total_active": 0,
+                    "total_reactive_power": null,
+                    "total_apparent_power": null,
+                    "total_power_factor": null
+            }
+        }
+    ]
+}
+```
