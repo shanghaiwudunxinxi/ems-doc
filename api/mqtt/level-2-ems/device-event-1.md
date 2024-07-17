@@ -67,8 +67,8 @@ description: V2
 | inverter\_efficiency                        | float64 | 否    | 逆变器效率          | 98.5 |
 | inverter\_internal\_temp                    | float64 | 否    | 逆变器内部温度（℃）     | 45   |
 | inverter\_heatsink\_temp                    | float64 | 否    | 散热器温度（℃）       | 50   |
-| inverter\_running\_status                   | float64 | 否    | 当前运行状态         | 1    |
-| fault\_status                               | float64 | 否    | 故障代码           | 0    |
+| inverter\_running\_status                   | int     | 否    | 当前运行状态         | 1    |
+| fault\_status                               | int     | 否    | 故障代码           | 0    |
 | alternating\_current\_output\_power\_factor | float64 | 否    | 交流输出功率因数       | 0.95 |
 | ambient\_temp                               | float64 | 否    | 环境温度（℃）        | 30   |
 | irradiance                                  | float64 | 否    | 辐射强度（W/m²）     | 800  |
