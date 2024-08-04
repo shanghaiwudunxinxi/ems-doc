@@ -373,7 +373,7 @@ description: V2
     "mid": "f76612ce-b8aa-4bab-8138-7e7fc74bcbcf",
     "type": "report_regular",
     "sub_device_id": 1,
-    "device_uid": "",
+    "device_uid": "xxxxxxxxxx",
     "timestamp": 1721180810009,
     "data": [
         {
@@ -442,7 +442,7 @@ description: V2
 </strong>    "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
     "type": "report_regular",
     "sub_device_id": 1,
-    "device_uid": "",
+    "device_uid": "xxxxxxxxxx",
     "timestamp": 1721119850008,
     "data": [
         {
@@ -476,7 +476,7 @@ description: V2
 }
 </code></pre>
 
-### **Payload示例 - AlternatingChargePail**
+### **Payload示例 -** alternating\_pail
 
 ```json
 {
@@ -484,7 +484,7 @@ description: V2
     "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
     "type": "report_regular",
     "sub_device_id": 1,
-    "device_uid": "",
+    "device_uid": "xxxxxxxxxx",
     "timestamp": 1721119850008,
     "data": [
         {
@@ -525,7 +525,7 @@ description: V2
 }
 ```
 
-### **Payload示例 - DirectChargePail**
+### **Payload示例 -** direct\_pail
 
 ```json
 {
@@ -533,7 +533,7 @@ description: V2
     "mid": "b15d71d6-48f5-4aeb-83e8-2dc828a75701",
     "type": "report_regular",
     "sub_device_id": 1,
-    "device_uid": "",
+    "device_uid": "xxxxxxxxxx",
     "timestamp": 1721119850008,
     "data": [
         {
@@ -556,6 +556,63 @@ description: V2
                     "total_reactive_power": null,
                     "total_apparent_power": null,
                     "total_power_factor": null
+            }
+        }
+    ]
+}
+```
+
+### **Payload示例 -** pail\_meter
+
+```json
+
+{
+    "trace_id": "085be8f4-2f7b-488d-8a93-d0c7dcd7f033",
+    "mid": "044b29cf-565e-434d-82a6-364411af6a71",
+    "type": "report_regular",
+    "sub_device_id": 1,
+    "device_uid": "xxxxxxxxxx",
+    "timestamp": 1705980251899,
+    "data": [
+        {
+            "type": "pail_meter",
+            "index": 0,
+            "data": {
+                "total_active_power": 0.285,
+                "active_power_phase_a": 0.11,
+                "active_power_phase_b": 0.105,
+                "active_power_phase_c": 0.065,
+                "total_reactive_power": 0.11,
+                "reactive_power_phase_a": 0,
+                "reactive_power_phase_b": 0,
+                "reactive_power_phase_c": 0.11,
+                "total_apparent_power": 0.35,
+                "apparent_power_phase_a": 0.11,
+                "apparent_power_phase_b": 0.11,
+                "apparent_power_phase_c": 0.13,
+                "total_power_factor": 0.187,
+                "power_factor_phase_a": 1,
+                "power_factor_phase_b": 1,
+                "power_factor_phase_c": 0.503,
+                "voltage_phase_a": 230.1,
+                "voltage_phase_b": 230.5,
+                "voltage_phase_c": 230.3,
+                "current_phase_a": 0,
+                "current_phase_b": 0,
+                "current_phase_c": 0,
+                "frequency_grid": 50,
+                "total_active_energy": 25197.5,
+                "total_active_energy_1": 0,
+                "total_active_energy_2": 0,
+                "total_active_energy_3": 0,
+                "total_forward_active_energy": 14318.5,
+                "forward_active_energy_1": 11,
+                "forward_active_energy_2": 10.5,
+                "forward_active_energy_3": 13.5,
+                "total_reverse_active_energy": 10879,
+                "reverse_active_energy_1": 1160,
+                "reverse_active_energy_2": 1160.5,
+                "reverse_active_energy_3": 1164
             }
         }
     ]
