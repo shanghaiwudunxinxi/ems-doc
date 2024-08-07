@@ -67,7 +67,7 @@ description: V2
 | inverter\_efficiency                        | float64 | 否    | 逆变器效率                                                         | 98.5 |
 | inverter\_internal\_temp                    | float64 | 否    | 逆变器内部温度（℃）                                                    | 45   |
 | inverter\_heatsink\_temp                    | float64 | 否    | 散热器温度（℃）                                                      | 50   |
-| inverter\_running\_status                   | int     | 否    | <p>当前运行状态 </p><p>1-停机 </p><p>2-待机 </p><p>5-运行 </p><p>7-故障</p> | 1    |
+| running\_status                             | int     | 否    | <p>当前运行状态 </p><p>1-停机 </p><p>2-待机 </p><p>5-运行 </p><p>7-故障</p> | 1    |
 | fault\_status                               | int     | 否    | 故障代码                                                          | 0    |
 | alternating\_current\_output\_power\_factor | float64 | 否    | 交流输出功率因数                                                      | 0.95 |
 | ambient\_temp                               | float64 | 否    | 环境温度（℃）                                                       | 30   |
