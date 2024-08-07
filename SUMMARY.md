@@ -34,6 +34,7 @@
     * [信息-电表设备](api/mqtt/level-2-ems/sub-elemeter.md)
     * [策略-均衡充放电](api/mqtt/level-2-ems/charge-strategy.md)
     * [策略-光伏均衡充放电](api/mqtt/level-2-ems/photovoltaic\_charge-strategy.md)
+    * [策略-充电桩均衡充放电](api/mqtt/level-2-ems/photovoltaic\_charge-strategy-1.md)
     * [策略-需量管理与防逆流](api/mqtt/level-2-ems/overdemand.md)
     * [策略-充放电深度保护](api/mqtt/level-2-ems/charge-depth.md)
     * [策略-安全保护](api/mqtt/level-2-ems/safety.md)
