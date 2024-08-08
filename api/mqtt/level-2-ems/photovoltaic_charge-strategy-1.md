@@ -41,21 +41,41 @@
     ],
     "dates" : [1,2],
     "mode" : 1,
-    "ems_devices": [{
-      "id": 1
-      "name": "右206",
-      "site_name": "测试站点",
-      "location": "",
-      "longitude": 0,
-      "latitude": 0,
-      "statistics_port": 1504,
-      "level": 1,
-      "type": "ems",
-      "running_status": 1,
-      "host": "192.168.77.206",
-      "port": 1502,
-      "license": "xxxxx"
-    }],
+    "devices": [
+      {
+            "id": 1,
+            "proto_id": 6,
+            "proto_type": 1,
+            "application_proto_type": 2,
+            "host": "192.168.77.208",
+            "port": 1510,
+            "com_addr": "/dev/ttyS3",
+            "com_no": 3,
+            "baud_rate": 9600,
+            "data_bits": 8,
+            "stop_bits": 1,
+            "parity": "N",
+            "dlt_addr": "",
+            "slave_id": 1,
+            "uid": "",
+            "station_name": "测试站点",
+            "name": "充电桩1",
+            "model": 1,
+            "ele_meter_id": null,
+            "pt": 0,
+            "ct": 0,
+            "direction": 0,
+            "charge_power": 10,
+            "point_table_proto_type": {
+                  "id": 0,
+                  "device_type": 0,
+                  "name": ""
+            },
+            "running_status": 1,
+            "charges": null,
+            "power_node_pail": null
+      }
+    ],
     "apply_to_all": false,
     "settings": [
       {
@@ -139,21 +159,41 @@
       6
     ],
     "mode":2,
-    "devices": [{
-      "uid": "QmqEiSCEuFNXCozS66W9y8-5",
-      "name": "右206",
-      "site_name": "测试站点",
-      "location": "",
-      "longitude": 0,
-      "latitude": 0,
-      "statistics_port": 1504,
-      "level": 1,
-      "type": "ems",
-      "running_status": 1,
-      "host": "192.168.77.206",
-      "port": 1502,
-      "license": "2YIZedmOtl4pcqo1EA4zhM5gofDI"
-    }],
+    "devices": [
+      {
+            "id": 1,
+            "proto_id": 6,
+            "proto_type": 1,
+            "application_proto_type": 2,
+            "host": "192.168.77.208",
+            "port": 1510,
+            "com_addr": "/dev/ttyS3",
+            "com_no": 3,
+            "baud_rate": 9600,
+            "data_bits": 8,
+            "stop_bits": 1,
+            "parity": "N",
+            "dlt_addr": "",
+            "slave_id": 1,
+            "uid": "",
+            "station_name": "测试站点",
+            "name": "充电桩1",
+            "model": 1,
+            "ele_meter_id": null,
+            "pt": 0,
+            "ct": 0,
+            "direction": 0,
+            "charge_power": 10,
+            "point_table_proto_type": {
+                  "id": 0,
+                  "device_type": 0,
+                  "name": ""
+            },
+            "running_status": 1,
+            "charges": null,
+            "power_node_pail": null
+      }
+    ],
     "apply_to_all": false,
     "settings": [
       {
