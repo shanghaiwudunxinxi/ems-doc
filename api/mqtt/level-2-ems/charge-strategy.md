@@ -538,7 +538,7 @@
                 "run_power": 300
             }
         ]
-    }
+    },
     "device_uid": "iYRkfVpi77",
     "timestamp": 1695265371000
 }
