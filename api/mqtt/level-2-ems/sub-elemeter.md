@@ -88,7 +88,7 @@
 }
 ```
 
-## 同步设备信息响应
+### 同步设备信息响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`elemeter_info/sync`</mark>`/result`
@@ -168,7 +168,7 @@
 }
 ```
 
-## 同步设备信息响应
+### 同步设备信息响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`elemeter_info/list`</mark>`/result`

@@ -1,4 +1,4 @@
-# 安全保护策略
+# 策略-安全保护
 
 ## 上报安全保护策略
 
@@ -68,7 +68,7 @@
 
 
 
-## 同步安全保护策略响应
+### 同步安全保护策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`safety/sync`</mark>`/result`

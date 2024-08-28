@@ -1,4 +1,4 @@
-# 充放电策略
+# 策略-均衡充放电
 
 ## 上报充放电策略
 
@@ -105,7 +105,7 @@
 }
 ```
 
-## 同步充放电策略响应
+### 同步充放电策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/result`
@@ -238,7 +238,7 @@
 ```
 {% endcode %}
 
-## 创建充放电策略响应
+### 创建充放电策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/result`
@@ -333,7 +333,7 @@
 ```
 {% endcode %}
 
-## 下发修改充放电策略响应
+### 下发修改充放电策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/result`
@@ -385,7 +385,7 @@
 }
 </code></pre>
 
-## 下发删除充放电策略响应
+### 下发删除充放电策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/result`
@@ -459,7 +459,7 @@
 }
 ```
 
-## 批量下发充放电策略响应
+### 批量下发充放电策略响应
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/result`
@@ -479,5 +479,102 @@
     "timestamp": 1706521447074,
     "reply": "ee2e8f09-b280-4e4d-bcb9-1529b703cfed",
     "code": 200,
+}
+```
+
+## 下发创建/更新充放电策略（根据支路ID）
+
+* **Topic：**
+  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/command`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/command`
+* **权限：**上报
+*   **Payload主结构**
+
+    <table><thead><tr><th width="173">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>mid</td><td><span data-option="36cc16022bbb4c7b93fe3a347e4eee85">UUID</span></td><td>true</td><td>消息ID</td><td>-</td><td>3e681859-6917-4b9a-9afd-3f162cd185bd</td></tr><tr><td>type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>消息类型</td><td>charge_by_node</td><td>charge_by_node</td></tr><tr><td>data</td><td><span data-option="005ee50172ec4f44a83308b0bfb12d48">data</span></td><td>true</td><td>消息内容</td><td>-</td><td>见<strong>Payload - data/ChargeByNode</strong></td></tr><tr><td>device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>（二级）设备UID</td><td>-</td><td>iYRkfVpi77</td></tr><tr><td>timestamp</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>消息时间戳（单位：毫秒）</td><td>(0, ∞)</td><td>1696837112000</td></tr></tbody></table>
+*   **Payload - data/ChargeByNode**
+
+    <table><thead><tr><th width="173">参数</th><th width="122">类型<select><option value="7d4bdb9b9c74432db026fc1a42c657f8" label="int" color="blue"></option><option value="788ee30047d74e5fadefda8ae2c6b579" label="[]int" color="blue"></option><option value="dc27004c92e443db924ae8f38f2ec7f1" label="[]chargeTime" color="blue"></option><option value="7b18b87853a34308b8576531588a6c12" label="[]string" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>node_id</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>支路节点ID</td><td>-</td><td>-</td></tr><tr><td>其余字段见<strong>Payload - data/ChargeCreate</strong></td><td></td><td>false</td><td></td><td></td><td></td></tr></tbody></table>
+* **Payload示例**
+
+{% code lineNumbers="true" %}
+```json
+{
+    "trace_id": "577f5df0-65d6-432d-8aac-0116e9530152",
+    "mid": "3e681859-6917-4b9a-9afd-3f162cd185bd",
+    "type": "charge_by_node",
+    "data": {
+        "charge_type": 1,
+        "status": 1,
+        "year": 2024,
+        "month": [
+            6
+        ],
+        "week_day": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+        ],
+        "mode": 2,
+        "node_id": 2,
+        "settings": [
+            {
+                "start_hour": 20,
+                "start_minute": 0,
+                "end_hour": 0,
+                "end_minute": 0,
+                "cdc_enable_mode": 2,
+                "run_power": 300
+            },
+            {
+                "start_hour": 0,
+                "start_minute": 0,
+                "end_hour": 1,
+                "end_minute": 0,
+                "cdc_enable_mode": 1,
+                "run_power": 300
+            }
+        ]
+    }
+    "device_uid": "iYRkfVpi77",
+    "timestamp": 1695265371000
+}
+```
+{% endcode %}
+
+### 创建/更新充放电策略（根据支路ID）响应
+
+* **Topic：**
+  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/result`
+  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/result`
+* **权限：**订阅
+*   **Payload主结构**
+
+    <table><thead><tr><th width="173">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>mid</td><td><span data-option="36cc16022bbb4c7b93fe3a347e4eee85">UUID</span></td><td>true</td><td>消息ID</td><td>-</td><td>4c5b3c27-cea8-4ea1-a936-41fd3596e0e9</td></tr><tr><td>reply</td><td><span data-option="36cc16022bbb4c7b93fe3a347e4eee85">UUID</span></td><td>true</td><td>所回复消息的mid</td><td>-</td><td>3e681859-6917-4b9a-9afd-3f162cd185bd</td></tr><tr><td>type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>消息类型</td><td>charge_by_node</td><td>charge_by_node</td></tr><tr><td>code</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>响应代码</td><td>-</td><td>见响应代码</td></tr><tr><td>msg</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>false</td><td>失败原因</td><td>-</td><td>参数错误</td></tr><tr><td>data</td><td><span data-option="005ee50172ec4f44a83308b0bfb12d48">data</span></td><td>true</td><td>其他数据</td><td></td><td>见data</td></tr><tr><td>device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>（二级）设备UID</td><td>-</td><td>iYRkfVpi77</td></tr><tr><td>timestamp</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>消息时间戳（单位：毫秒）</td><td>(0, ∞)</td><td>1696837112000</td></tr></tbody></table>
+*   **响应代码**
+
+    <table><thead><tr><th>错误码<select><option value="271841fe398248e2ad777dd883d4754c" label="400" color="blue"></option><option value="3c1ae8fc6fe644f78b5f6b6f889f7621" label="200" color="blue"></option></select></th><th>描述</th><th>说明</th></tr></thead><tbody><tr><td><span data-option="3c1ae8fc6fe644f78b5f6b6f889f7621">200</span></td><td>下发成功</td><td></td></tr><tr><td><span data-option="271841fe398248e2ad777dd883d4754c">400</span></td><td>参数有误</td><td></td></tr></tbody></table>
+*   **Data**
+
+    | 参数         | 类型  | 说明      |
+    | ---------- | --- | ------- |
+    | policy\_id | int | 充放电策略id |
+* **Payload示例**
+
+```json
+{
+    "trace_id": "577f5df0-65d6-432d-8aac-0116e9530152",
+    "mid": "4c5b3c27-cea8-4ea1-a936-41fd3596e0e9",
+    "type": "charge_by_node",
+    "reply": "3e681859-6917-4b9a-9afd-3f162cd185bd",
+    "code": 200,
+    "data": {
+        "policy_id": 1
+    },
+    "device_uid": "iYRkfVpi77",
+    "timestamp": 1695265671000
 }
 ```

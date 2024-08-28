@@ -28,7 +28,7 @@
 }
 </code></pre>
 
-## 发送pcs远程控制策略响应
+### 发送pcs远程控制策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`pcs_control/set`</mark>`/result`
@@ -90,7 +90,7 @@
 
 
 
-## 同步pcs远程控制策略响应
+### 同步pcs远程控制策略响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`pcs_control/sync`</mark>`/result`

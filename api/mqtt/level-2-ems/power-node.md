@@ -1,4 +1,4 @@
-# 支路设计
+# 配置-支路设计
 
 ## 上报支路设计
 
@@ -121,7 +121,7 @@
 }
 ```
 
-## 同步支路设计响应
+### 同步支路设计响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`power_node/sync`</mark>`/result`

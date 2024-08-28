@@ -1,4 +1,4 @@
-# 子设备信息
+# 信息-EMU设备
 
 ## 上报设备信息
 
@@ -65,7 +65,7 @@
 }
 ```
 
-## 同步设备信息响应
+### 同步设备信息响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`device_info/sync`</mark>`/result`
@@ -132,7 +132,7 @@
 }
 ```
 
-## 同步设备信息响应
+### 同步设备信息响应
 
 * **Topic：**
   * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`device_info/list`</mark>`/result`
