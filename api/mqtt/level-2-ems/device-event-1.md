@@ -296,12 +296,29 @@ _**SubEleMeterData一致**_
         "data": {
             "total": {
                 "running_status": 2,
+                "device_count": 3,
                 "soc": 95.33333333333333,
                 "pcs_total_active_power": 2500,
                 "pcs_total_reactive_power": 444.4,
                 "current_chargeable_energy": 4.4,
-                "current_dischargeable_energy": 2.2
-            }
+                "current_dischargeable_energy": 2.2,
+                "max_charge_power": 582,
+                "max_discharge_power": 582
+            },
+            "statistics": [
+                {
+                    "ele_meter_id": 1,
+                    "running_status": 2,
+                    "pcs_total_active_power": 88.1,
+                    "soc": 52.4
+                },
+                {
+                    "ele_meter_id": 2,
+                    "running_status": 2,
+                    "pcs_total_active_power": 88.2,
+                    "soc": 52.8
+                }
+            ]
         }
     }
 }
