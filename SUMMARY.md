@@ -45,5 +45,5 @@
     * [\[Deprecated\]设备事件V1](api/mqtt/level-2-ems/device-event.md)
     * [设备事件V2](api/mqtt/level-2-ems/device-event-1.md)
     * [故障告警](api/mqtt/level-2-ems/fault-alarm.md)
-    * [\[未上线\]OTA](api/mqtt/level-2-ems/wei-shang-xian-ota.md)
+    * [\[未上线\]OTA](api/mqtt/level-2-ems/ota.md)
     * [\[未上线\]OTA-EMU](api/mqtt/level-2-ems/ota-emu.md)
