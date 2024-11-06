@@ -133,7 +133,7 @@ description: EMUOTA
 
 * **Payload - data**
 
-<table><thead><tr><th width="183">参数</th><th width="93">类型</th><th width="99">是否必填</th><th width="255">描述</th><th>样例</th></tr></thead><tbody><tr><td>device_id</td><td>int</td><td>是</td><td>升级设备ID</td><td>2</td></tr><tr><td>download_status</td><td>int</td><td>是</td><td><p>下载状态</p><p>1-下发EMU升级成功</p><p>2-下发EMU升级失败</p><p>3-下载失败</p></td><td>1</td></tr></tbody></table>
+<table><thead><tr><th width="183">参数</th><th width="93">类型</th><th width="99">是否必填</th><th width="255">描述</th><th>样例</th></tr></thead><tbody><tr><td>device_id</td><td>int</td><td>是</td><td>升级设备ID</td><td>2</td></tr><tr><td>download_status</td><td>int</td><td>是</td><td><p>下载状态</p><p>1-下发EMU升级成功</p><p>2-下载失败</p><p>3-MD5校验失败</p><p>4-删除文件夹内容失败</p><p>5-解压失败</p><p>6-下发EMU升级失败</p></td><td>1</td></tr></tbody></table>
 
 * **Payload示例**
 
