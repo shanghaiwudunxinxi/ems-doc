@@ -14,7 +14,7 @@
     <table><thead><tr><th width="173">参数</th><th width="122">类型<select><option value="7d4bdb9b9c74432db026fc1a42c657f8" label="int" color="blue"></option><option value="788ee30047d74e5fadefda8ae2c6b579" label="[]int" color="blue"></option><option value="dc27004c92e443db924ae8f38f2ec7f1" label="[]chargeTime" color="blue"></option><option value="7b18b87853a34308b8576531588a6c12" label="[]emsDevice" color="blue"></option><option value="WJJvuYRv6dm6" label="bool" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>id</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>ID</td><td>-</td><td>1</td></tr><tr><td>charge_type</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>充放电类型（后续将支持更多类型）</td><td>1-定时充放电</td><td>1</td></tr><tr><td>status</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>策略开关</td><td>0-关闭,<br>1-开启</td><td>1</td></tr><tr><td>year</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>年</td><td>（若mode=1,则year为必填；)</td><td>2024</td></tr><tr><td>month</td><td><span data-option="788ee30047d74e5fadefda8ae2c6b579">[]int</span></td><td>true</td><td>月份选择（0代表一月）</td><td>[0,11]</td><td>[1,7,8,11]</td></tr><tr><td>week_day</td><td><span data-option="788ee30047d74e5fadefda8ae2c6b579">[]int</span></td><td>false</td><td>星期选择（0代表星期一）</td><td>[0,6]</td><td>[5,6]</td></tr><tr><td>dates</td><td><span data-option="788ee30047d74e5fadefda8ae2c6b579">[]int</span></td><td>false</td><td>日期选择（0代表1日）</td><td>[0, 30]（根据年份大小月份变化）</td><td>[0,1]</td></tr><tr><td>mode</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>模式（根据mode参数取值不同，校验week_day或dates是否必填）</td><td>1-月日模式<br>2- 月周模式<br></td><td>1（若mode=1,则dates为必填；若mode=2，则week_day为必填</td></tr><tr><td>ems_devices</td><td><span data-option="7b18b87853a34308b8576531588a6c12">[]emsDevice</span></td><td>true</td><td>设备列表</td><td>-</td><td>-</td></tr><tr><td>settings</td><td><span data-option="dc27004c92e443db924ae8f38f2ec7f1">[]chargeTime</span></td><td>true</td><td>充放电时间段</td><td>-</td><td>-</td></tr><tr><td>apply_to_all</td><td><span data-option="WJJvuYRv6dm6">bool</span></td><td>true</td><td>是否包括所有一级设备</td><td>-</td><td>false</td></tr></tbody></table>
 *   **Payload - emsDevice**
 
-    <table><thead><tr><th width="173">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option><option value="1b28025203f644c291919cb0f1184736" label="float" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th width="127">描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备UID</td><td>-</td><td><a href="https://wudun.atlassian.net/browse/DGHDJSJKD-1?atlOrigin=eyJpIjoiYjM0MTA4MzUyYTYxNDVkY2IwMzVjOGQ3ZWQ3NzMwM2QiLCJwIjoianN3LWdpdGxhYlNNLWludCJ9">DGHDJSJKD-1</a></td></tr><tr><td>name</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备名称</td><td>-</td><td>ems设备</td></tr><tr><td>site_name</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>站点名称</td><td>-</td><td>ems站点</td></tr><tr><td>location</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>详细地理位置</td><td>-</td><td>wudun</td></tr><tr><td>longitude</td><td><span data-option="1b28025203f644c291919cb0f1184736">float</span></td><td>true</td><td>经度</td><td>-</td><td></td></tr><tr><td>latitude</td><td><span data-option="1b28025203f644c291919cb0f1184736">float</span></td><td>true</td><td>纬度</td><td></td><td></td></tr><tr><td>level</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>EMS等级</td><td>[1, 2]</td><td>1</td></tr><tr><td>type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备类型</td><td>-</td><td>ems</td></tr><tr><td>running_status</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td><p>运行状态</p><p>1-运行</p><p>2-离线</p><p>3-故障  </p></td><td>[1,2,3]</td><td>1</td></tr><tr><td>host</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>地址</td><td>-</td><td>192.168.0.1</td></tr><tr><td>port</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>端口</td><td>[0,65525]</td><td>2171</td></tr><tr><td>license</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>激活码</td><td>-</td><td>2YIZedmOtl4pcqo1EA4zhM5gofDI</td></tr></tbody></table>
+    <table><thead><tr><th width="173">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option><option value="1b28025203f644c291919cb0f1184736" label="float" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th width="127">描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>id</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>设备ID</td><td>-</td><td>1</td></tr><tr><td>name</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备名称</td><td>-</td><td>ems设备</td></tr><tr><td>site_name</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>站点名称</td><td>-</td><td>ems站点</td></tr><tr><td>location</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>详细地理位置</td><td>-</td><td>wudun</td></tr><tr><td>longitude</td><td><span data-option="1b28025203f644c291919cb0f1184736">float</span></td><td>true</td><td>经度</td><td>-</td><td></td></tr><tr><td>latitude</td><td><span data-option="1b28025203f644c291919cb0f1184736">float</span></td><td>true</td><td>纬度</td><td></td><td></td></tr><tr><td>level</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>EMS等级</td><td>[1, 2]</td><td>1</td></tr><tr><td>type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备类型</td><td>-</td><td>ems</td></tr><tr><td>running_status</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td><p>运行状态</p><p>1-运行</p><p>2-离线</p><p>3-故障  </p></td><td>[1,2,3]</td><td>1</td></tr><tr><td>host</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>地址</td><td>-</td><td>192.168.0.1</td></tr><tr><td>port</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>端口</td><td>[0,65525]</td><td>2171</td></tr><tr><td>license</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>激活码</td><td>-</td><td>2YIZedmOtl4pcqo1EA4zhM5gofDI</td></tr></tbody></table>
 *   **Payload - chargeTime**
 
     <table><thead><tr><th width="184">参数</th><th width="122">类型<select><option value="7d4bdb9b9c74432db026fc1a42c657f8" label="int" color="blue"></option><option value="788ee30047d74e5fadefda8ae2c6b579" label="[]int" color="blue"></option><option value="dc27004c92e443db924ae8f38f2ec7f1" label="[]chargeTime" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>start_hour</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>开始小时</td><td>[0,23]</td><td>20</td></tr><tr><td>start_minute</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>开始分钟</td><td>[0,59]</td><td>0</td></tr><tr><td>end_hour</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>结束小时</td><td>[0,23]</td><td>0</td></tr><tr><td>end_minute</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>结束分钟</td><td>[0,59]</td><td>0</td></tr><tr><td>cdc_enable_mode</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>充放电设定</td><td>0-待机,<br>1-充电,<br>2-放电</td><td>1</td></tr><tr><td>run_power</td><td><span data-option="7d4bdb9b9c74432db026fc1a42c657f8">int</span></td><td>true</td><td>运行功率(单位：kW)</td><td>[0,65535]</td><td>300</td></tr></tbody></table>
@@ -140,7 +140,7 @@
     ],
     "mode":2,
     "ems_devices": [{
-      "uid": "QmqEiSCEuFNXCozS66W9y8-5",
+      "id": 1,
       "name": "右206",
       "site_name": "测试站点",
       "location": "",
@@ -152,7 +152,6 @@
       "running_status": 1,
       "host": "192.168.77.206",
       "port": 1502,
-      "license": "2YIZedmOtl4pcqo1EA4zhM5gofDI"
     }],
     "apply_to_all": false,
     "settings": [
@@ -224,13 +223,13 @@
                 "run_power": 100
             }
         ],
-        "ems_device_uids": [
-            "ZedmOtl4pc"
-        ],
-//      "apply_to_all": true,
-//        "ems_device_ids": [
-//            "1"
-//        ]    // ems_device_ids、ems_device_uids、apply_to_all 三选一
+        // "ems_device_uids": [
+        //    "ZedmOtl4pc"
+        // ],
+        // "apply_to_all": true,
+        "ems_device_ids": [
+           1, 2, 3
+        ]    // ems_device_ids、ems_device_uids、apply_to_all 三选一
     },
     "device_uid": "iYRkfVpi77",
     "timestamp": 1695265371000
@@ -319,13 +318,13 @@
                 "run_power": 100
             }
         ],
-        "ems_device_uids": [
-            "ZedmOtl4pc"
-        ]
-//      "apply_to_all": true,
-//        "ems_device_ids": [
-//            "1"
-//        ]    // ems_device_ids、ems_device_uids、apply_to_all 三选一
+        // "ems_device_uids": [
+        //    "ZedmOtl4pc"
+        // ],
+        // "apply_to_all": true,
+        "ems_device_ids": [
+           1, 2, 3
+        ]    // ems_device_ids、ems_device_uids、apply_to_all 三选一
     },
     "device_uid": "iYRkfVpi77",
     "timestamp": 1695265371000
