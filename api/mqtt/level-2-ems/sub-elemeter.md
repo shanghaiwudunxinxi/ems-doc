@@ -5,7 +5,7 @@
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`elemeter_info/details`</mark>`/post`
   * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`elemeter_info/details`</mark>`/post`
-* **权限：**上报
+* **权限：**订阅
 * **Payload主结构**
 
 <table><thead><tr><th width="152">参数</th><th width="95">类型</th><th>是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td>mid</td><td>uuid</td><td>是</td><td>消息ID</td><td>-</td><td>3e681859-6917-4b9a-9afd-3f162cd185bd</td></tr><tr><td>type</td><td>str</td><td>是</td><td>消息类型</td><td>elemeter_info_details</td><td>elemeter_info_details</td></tr><tr><td>data</td><td>data</td><td>是</td><td>消息内容</td><td>-</td><td>见<strong>Payload - data</strong></td></tr><tr><td>sub_device_id</td><td>int</td><td>是</td><td>一级设备ID，仅二级替一级设备上报时需要该字段</td><td>-</td><td>1</td></tr><tr><td>device_uid</td><td>str</td><td>是</td><td>（二级）设备UID</td><td>-</td><td>iYRkfVpi77</td></tr><tr><td>timestamp</td><td>int</td><td>是</td><td>消息时间戳（单位：毫秒）</td><td>(0, ∞)</td><td>1696837112000</td></tr></tbody></table>
