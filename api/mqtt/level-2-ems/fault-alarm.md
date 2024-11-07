@@ -19,7 +19,7 @@
 {
   "trace_id": "577f5df0-65d6-432d-8aac-0116e9530152",
   "mid": "ee2e8f09-b280-4e4d-bcb9-1529b703cfed",
-  "type": "safety_details",
+  "type": "alarms_details",
   "data": {
     "content": "不控整流告警",
     "device_type": "PCS",
