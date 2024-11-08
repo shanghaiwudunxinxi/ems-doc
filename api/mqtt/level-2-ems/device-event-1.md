@@ -132,7 +132,7 @@ _**SubEleMeterData一致**_
             "cooling_point": 16.2,
             "heating_point": 28.5,
             "cooling_diff": 7.4,
-            "heating_diff": 13.1,
+            "heating_diff": 13.1
         }        
     }]
 }
