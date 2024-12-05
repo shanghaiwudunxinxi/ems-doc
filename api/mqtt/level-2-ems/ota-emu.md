@@ -43,7 +43,7 @@ description: EMUOTA
 * **Payload - data \[]**&#x45;MUVersion
 * EMUVersion
 
-<table><thead><tr><th width="159">参数</th><th width="93">类型</th><th width="99">是否必填</th><th width="255">描述</th><th>样例</th></tr></thead><tbody><tr><td>device_id</td><td>int</td><td>是</td><td>升级设备ID</td><td>2</td></tr><tr><td>status</td><td>int</td><td>是</td><td><p>设备状态</p><p>1-运行</p><p>2-离线</p><p>3-故障</p></td><td>1</td></tr><tr><td>emu_upgrade_success</td><td>int</td><td>否</td><td><p>EMU升级成功</p><p>Bit0:传输结束</p><p>Bit1:板卡1成功 </p><p>Bit2:板卡2成功</p><p>Bit3:板卡3成功</p><p>Bit4:板卡4成功</p><p>Bit5:板卡5成功</p><p>Bit6:板卡6成功</p><p>Bit7:emu成功 </p><p>Bit8:全部升级成功</p><p>bit9:升级未完成</p></td><td>1</td></tr><tr><td>emu_upgrade_device</td><td>int</td><td>否</td><td><p>EMU升级设备</p><p>3:EMU </p><p>21:通讯板卡1 </p><p>22:通讯板2 </p><p>23:通讯板3 </p><p>24:通讯板4 </p><p>25:通讯板5 </p><p>26:通讯板6</p></td><td>3</td></tr><tr><td>emu_upgrade_status</td><td>int</td><td>否</td><td><p>EMU升级状态 </p><p>1:升级准备 </p><p>2:传输准备 </p><p>3:传输状态 </p><p>4:校验状态 </p><p>5:完成状态</p></td><td>5</td></tr><tr><td>emu_upgrade_content</td><td>int</td><td>否</td><td>升级内容 传输状态:对应文件传输进度</td><td>100</td></tr><tr><td>emu_product_sn</td><td>string</td><td>否</td><td>EMU产品SN码</td><td>emu-v1.0.0</td></tr></tbody></table>
+<table><thead><tr><th width="159">参数</th><th width="93">类型</th><th width="99">是否必填</th><th width="255">描述</th><th>样例</th></tr></thead><tbody><tr><td>device_id</td><td>int</td><td>是</td><td>升级设备ID</td><td>2</td></tr><tr><td>status</td><td>int</td><td>是</td><td><p>设备状态</p><p>1-运行</p><p>2-离线</p><p>3-故障</p></td><td>1</td></tr><tr><td>emu_upgrade_success</td><td>int</td><td>否</td><td><p>EMU升级成功</p><p>Bit0:传输结束</p><p>Bit1:板卡1成功 </p><p>Bit2:板卡2成功</p><p>Bit3:板卡3成功</p><p>Bit4:板卡4成功</p><p>Bit5:板卡5成功</p><p>Bit6:板卡6成功</p><p>Bit7:emu成功 </p><p>Bit8:全部升级成功</p><p>bit9:升级未完成</p></td><td>512</td></tr><tr><td>emu_upgrade_device</td><td>int</td><td>否</td><td><p>EMU升级设备</p><p>3:EMU </p><p>21:通讯板卡1 </p><p>22:通讯板2 </p><p>23:通讯板3 </p><p>24:通讯板4 </p><p>25:通讯板5 </p><p>26:通讯板6</p></td><td>3</td></tr><tr><td>emu_upgrade_status</td><td>int</td><td>否</td><td><p>EMU升级状态 </p><p>1:升级准备 </p><p>2:传输准备 </p><p>3:传输状态 </p><p>4:校验状态 </p><p>5:完成状态</p></td><td>5</td></tr><tr><td>emu_upgrade_content</td><td>int</td><td>否</td><td>升级内容 传输状态:对应文件传输进度</td><td>100</td></tr><tr><td>emu_product_sn</td><td>string</td><td>否</td><td>EMU产品SN码</td><td>emu-v1.0.0</td></tr></tbody></table>
 
 * **Payload示例**
 
@@ -56,7 +56,7 @@ description: EMUOTA
     "data": [{
         "device_id": 2,
         "status": 1,
-        "emu_upgrade_success": 1,
+        "emu_upgrade_success": 512,
         "emu_upgrade_device": 3,
         "emu_upgrade_status": 5,
         "emu_upgrade_content": 100,
@@ -65,7 +65,7 @@ description: EMUOTA
     {
         "device_id": 3,
         "status": 1,
-        "emu_upgrade_success": 1,
+        "emu_upgrade_success": 512,
         "emu_upgrade_device": 3,
         "emu_upgrade_status": 5,
         "emu_upgrade_content": 100,
