@@ -1,10 +1,10 @@
-# 【未上线】无功治理
+# 无功治理
 
 ## 下发无功治理控制
 
 * **Method：**`POST`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/reactive-power-control`</mark>
-* **接口描述：**为特定ems设备下发无功治理控制指令
+* **接口描述：**&#x4E3A;特定ems设备下发无功治理控制指令
 *   **请求**
 
     * Body参数/reactivePowerControl
@@ -30,7 +30,7 @@
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/reactive-power-control`</mark>
-* **接口描述：**获取无功治理控制
+* **接口描述：**&#x83B7;取无功治理控制
 *   **请求**
 
     * Query参数
@@ -52,7 +52,7 @@
 
 ## 同步无功治理控制
 
-* **Method：**PUT
+* **Method：**&#x50;UT
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/reactive-power-control/sync`</mark>
 * **接口描述： 同步无功治理控制**
 *   **请求**

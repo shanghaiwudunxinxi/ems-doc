@@ -2,14 +2,14 @@
 description: ！该版本即将下线，请使用V2版本！
 ---
 
-# \[Deprecated]设备事件
+# \[Deprecated]设备事件V1
 
 ## 定时上报信息
 
 * **Topic：**
   * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`report/regular`</mark>`/post`
   * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`report/regular`</mark>`/post`
-* **权限：**订阅
+* **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
     <table><thead><tr><th width="173" align="center">参数</th><th width="80">类型<select><option value="36cc16022bbb4c7b93fe3a347e4eee85" label="UUID" color="blue"></option><option value="826385f71ccd46638f3a63c8d6abef21" label="str" color="blue"></option><option value="bb5bb2c3a10846bf881acb0506b5951f" label="int" color="blue"></option><option value="f53674f5f7b044bab9768d2995855ea2" label="[]str" color="blue"></option><option value="005ee50172ec4f44a83308b0bfb12d48" label="data" color="blue"></option></select></th><th width="100" data-type="checkbox">是否必填</th><th>描述</th><th>范围</th><th>样例</th></tr></thead><tbody><tr><td align="center">mid</td><td><span data-option="36cc16022bbb4c7b93fe3a347e4eee85">UUID</span></td><td>true</td><td>消息ID</td><td>-</td><td>3e681859-6917-4b9a-9afd-3f162cd185bd</td></tr><tr><td align="center">type</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>消息类型</td><td>report_regular</td><td>report_regular</td></tr><tr><td align="center">data</td><td><span data-option="005ee50172ec4f44a83308b0bfb12d48">data</span></td><td>true</td><td>消息内容</td><td>-</td><td>见<strong>Payload - data</strong></td></tr><tr><td align="center">sub_device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>false</td><td>子设备UID，仅二级替单个子设备上报时需要该字段</td><td>-</td><td>jHODSda39</td></tr><tr><td align="center">sub_device_id</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>false</td><td>子设备ID，仅二级替单个子设备上报时需要该字段</td><td>(0, ∞)</td><td>2</td></tr><tr><td align="center">device_uid</td><td><span data-option="826385f71ccd46638f3a63c8d6abef21">str</span></td><td>true</td><td>设备ID</td><td>-</td><td>iYRkfVpi77</td></tr><tr><td align="center">timestamp</td><td><span data-option="bb5bb2c3a10846bf881acb0506b5951f">int</span></td><td>true</td><td>消息时间戳（单位：毫秒）</td><td>(0, ∞)</td><td>1696837112000</td></tr></tbody></table>
@@ -40,7 +40,7 @@ description: ！该版本即将下线，请使用V2版本！
 *   **payload - EMSData**
 
     <table><thead><tr><th width="178" align="center">参数</th><th width="112" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">total</td><td align="center">EMSDataTotal</td><td>false</td><td align="center">二级EMS汇总</td><td align="center"></td></tr><tr><td align="center">statistics</td><td align="center">[]<mark style="background-color:green;">EMSDataStatistics</mark></td><td>false</td><td align="center">支路下属储能设备运行统计</td><td align="center"></td></tr></tbody></table>
-*   **payload - **<mark style="background-color:orange;">**EMSDataTotal**</mark>
+*   **payload -&#x20;**<mark style="background-color:orange;">**EMSDataTotal**</mark>
 
     <table><thead><tr><th width="178" align="center">参数</th><th width="133" align="center">类型</th><th width="97" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">running_status</td><td align="center">int</td><td>false</td><td align="center">运行状态<br>0-未知状态<br>1-停机<br>2-运行</td><td align="center"></td></tr><tr><td align="center">soc</td><td align="center">float</td><td>false</td><td align="center">平均soc</td><td align="center"></td></tr><tr><td align="center">pcs_total_active_power</td><td align="center">float</td><td>false</td><td align="center">当前总有功功率（单位：kW）</td><td align="center"></td></tr><tr><td align="center">pcs_total_reactive_power</td><td align="center">float</td><td>false</td><td align="center">当前总无功功率（单位：kVar）</td><td align="center"></td></tr><tr><td align="center">current_chargeable_energy</td><td align="center">float</td><td>false</td><td align="center">剩余可充电电量（单位：kWh）</td><td align="center"></td></tr><tr><td align="center">current_dischargeable_energy</td><td align="center">float</td><td>false</td><td align="center">剩余可放电电量（单位：kWh）</td><td align="center"></td></tr></tbody></table>
 *   **payload -** <mark style="background-color:green;">EMSDataStatistics</mark>

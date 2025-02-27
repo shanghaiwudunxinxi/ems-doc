@@ -8,7 +8,7 @@ description: 获取二级EMS子设备故障
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/sub-device-fault`</mark>
-* **接口描述：**获取特定二级ems设备子设备故障
+* **接口描述：**&#x83B7;取特定二级ems设备子设备故障
 * **请求**
   *   Query参数
 

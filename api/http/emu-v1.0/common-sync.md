@@ -2,9 +2,9 @@
 
 ## 同步特定字段
 
-* **Method：**PUT
+* **Method：**&#x50;UT
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/common-sync`</mark>
-* **接口描述：**请求同步特定字段
+* **接口描述：**&#x8BF7;求同步特定字段
 *   **请求**
 
     * Query参数

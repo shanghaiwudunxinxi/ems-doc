@@ -4,7 +4,7 @@
 
 * **Method：**`POST`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/pcs-control`</mark>
-* **接口描述：**为特定ems设备下发PCS控制指令
+* **接口描述：**&#x4E3A;特定ems设备下发PCS控制指令
   * _<mark style="color:red;">注意：</mark>该接口成功仅代表指令下发成功，PCS是否执行成功请通过同步接口确认！_
 *   **请求**
 
@@ -31,7 +31,7 @@
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/pcs-control`</mark>
-* **接口描述：**获取PCS状态
+* **接口描述：**&#x83B7;取PCS状态
 *   **请求**
 
     * Query参数
@@ -53,7 +53,7 @@
 
 ## 同步PCS状态
 
-* **Method：**PUT
+* **Method：**&#x50;UT
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/pcs-control/sync`</mark>
 * **接口描述： 同步PCS状态**
 *   **请求**

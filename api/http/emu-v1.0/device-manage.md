@@ -8,7 +8,7 @@ description: 绑定、解绑设备。
 
 * **Method：**`POST`
 * **URL：**`https://www.einfra.cn/wad/`<mark style="color:red;">`emm`</mark>`/v1/api`<mark style="color:red;">`/device/bind-owner`</mark>
-* **接口描述：**绑定设备
+* **接口描述：**&#x7ED1;定设备
 * **请求**
   *   Body参数
 

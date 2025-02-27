@@ -8,7 +8,7 @@ description: 获取、更新、删除空调联动策略
 
 * **Method：**`POST`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/air-strategy`</mark>
-* **接口描述：**为特定ems设备创建空调联动策略，每个设备最多一条策略
+* **接口描述：**&#x4E3A;特定ems设备创建空调联动策略，每个设备最多一条策略
 * **请求**
   *   Body参数/airStrategy
 
@@ -108,7 +108,7 @@ func main() {
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/air-strategy`</mark>
-* **接口描述：**获取空调联动策略列表
+* **接口描述：**&#x83B7;取空调联动策略列表
 * **请求**
   *   Query参数
 
@@ -129,9 +129,9 @@ func main() {
 
 ## 修改空调联动策略
 
-* **Method：**PATCH
+* **Method：**&#x50;ATCH
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/air-strategy`</mark>
-* **接口描述：**根据设备uid修改策略
+* **接口描述：**&#x6839;据设备uid修改策略
 * **请求**
   *   Query参数
 
@@ -149,7 +149,7 @@ func main() {
 
 ## 同步空调联动策略
 
-* **Method：**PUT
+* **Method：**&#x50;UT
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/air-strategy/sync`</mark>
 * **接口描述： 同步空调联动策略**
 *   **请求**

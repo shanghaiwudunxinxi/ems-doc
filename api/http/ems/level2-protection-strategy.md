@@ -8,7 +8,7 @@ description: 获取、更新、删除二级设备保护策略
 
 * **Method：**`POST`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/level2-protection-strategy/streaming`</mark>
-* **接口描述：**为特定二级ems设备创建防逆流策略
+* **接口描述：**&#x4E3A;特定二级ems设备创建防逆流策略
 * **请求**
   *   Body参数/streaming
 
@@ -27,7 +27,7 @@ description: 获取、更新、删除二级设备保护策略
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/level2-protection-strategy/streaming`</mark>
-* **接口描述：**获取防逆流策略
+* **接口描述：**&#x83B7;取防逆流策略
 * **请求**
   *   Query参数
 
@@ -50,9 +50,9 @@ description: 获取、更新、删除二级设备保护策略
 
 ## 修改防逆流策略
 
-* **Method：**PATCH
+* **Method：**&#x50;ATCH
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/level2-protection-strategy/streaming`</mark>
-* **接口描述：**根据设备及索引修改防逆流策略
+* **接口描述：**&#x6839;据设备及索引修改防逆流策略
 * **请求**
   *   Query参数
 
@@ -72,7 +72,7 @@ description: 获取、更新、删除二级设备保护策略
 
 * **Method：**`POST`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/level2-protection-strategy/overdemand`</mark>
-* **接口描述：**为特定二级ems设备创建防过需策略
+* **接口描述：**&#x4E3A;特定二级ems设备创建防过需策略
 * **请求**
   *   Body参数/overdemand
 
@@ -91,7 +91,7 @@ description: 获取、更新、删除二级设备保护策略
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/level2-protection-strategy/overdemand`</mark>
-* **接口描述：**获取防过需策略
+* **接口描述：**&#x83B7;取防过需策略
 * **请求**
   *   Query参数
 
@@ -114,9 +114,9 @@ description: 获取、更新、删除二级设备保护策略
 
 ## 修改防过需策略
 
-* **Method：**PATCH
+* **Method：**&#x50;ATCH
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/level2-protection-strategy/streaming`</mark>
-* **接口描述：**根据设备及索引修改防过需策略
+* **接口描述：**&#x6839;据设备及索引修改防过需策略
 * **请求**
   *   Query参数
 

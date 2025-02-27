@@ -8,7 +8,7 @@ description: 查看、更新设备信息。
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/sub-device`</mark>
-* **接口描述：**获取设备列表
+* **接口描述：**&#x83B7;取设备列表
 * **请求**
   *   Query参数
 

@@ -4,7 +4,7 @@
 
 * **Method：**`POST`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/bms-control`</mark>
-* **接口描述：**为特定ems设备下发BMS控制指令
+* **接口描述：**&#x4E3A;特定ems设备下发BMS控制指令
 *   **请求**
 
     * Body参数/bmsControl
@@ -30,7 +30,7 @@
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/bms-control`</mark>
-* **接口描述：**获取BMS状态
+* **接口描述：**&#x83B7;取BMS状态
 *   **请求**
 
     * Query参数
@@ -52,7 +52,7 @@
 
 ## 同步BMS状态
 
-* **Method：**PUT
+* **Method：**&#x50;UT
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/bms-control/sync`</mark>
 * **接口描述： 同步BMS状态**
 *   **请求**

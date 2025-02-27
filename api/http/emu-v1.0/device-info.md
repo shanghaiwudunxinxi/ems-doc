@@ -2,13 +2,13 @@
 description: 查看、更新设备信息。
 ---
 
-# 设备信息
+# EMU设备信息
 
 ## 根据更新时间范围获取设备列表
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/device/by-time`</mark>
-* **接口描述：**根据更新时间获取设备列表
+* **接口描述：**&#x6839;据更新时间获取设备列表
 * **请求**
   *   Query参数
 
@@ -49,7 +49,7 @@ description: 查看、更新设备信息。
 
 * **Method：**`GET`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/device`</mark>
-* **接口描述：**获取设备列表
+* **接口描述：**&#x83B7;取设备列表
 * **请求**
   *   Query参数
 
@@ -109,7 +109,7 @@ Response response = client.newCall(request).execute();java
 
 * **Method：**`PATCH`
 * **URL：**`https://www.einfra.cn/wad/ems/v1/api`<mark style="color:red;">`/device`</mark>
-* **接口描述：**更新设备信息
+* **接口描述：**&#x66F4;新设备信息
 * **请求**
   *   Body参数
 
