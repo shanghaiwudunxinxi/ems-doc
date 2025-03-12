@@ -87,6 +87,7 @@ _与SubEleMeterData一致_
 | alternating\_current\_output\_power\_factor | float64 | 否    | 交流输出功率因数                                                      | 0.95 |
 | ambient\_temp                               | float64 | 否    | 环境温度（℃）                                                       | 30   |
 | irradiance                                  | float64 | 否    | 辐射强度（W/m²）                                                    | 800  |
+| cumulative\_power\_generation               | float64 | 否    | 累计发电量（单位：kWh）                                                 | 100  |
 
 ### **payload - AlternatingChargePailData**
 
@@ -687,7 +688,8 @@ _**SubEleMeterData一致**_
                 "fault_status": 785,
                 "alternating_current_output_power_factor": 0.886,
                 "ambient_temp": null,
-                "irradiance": null
+                "irradiance": null,
+                "cumulative_power_generation": 100
             }
         }
     ]
