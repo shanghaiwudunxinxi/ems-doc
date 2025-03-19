@@ -64,30 +64,7 @@ _与SubEleMeterData一致_
 
 ### **payload - PhotovoltaicInverterData**
 
-| 参数                                          | 类型      | 是否必填 | 描述                                                            | 样例   |
-| ------------------------------------------- | ------- | ---- | ------------------------------------------------------------- | ---- |
-| direct\_current\_voltage                    | float64 | 否    | 直流侧（DC）电压（V）                                                  | 500  |
-| direct\_current\_current                    | float64 | 否    | 直流侧（DC）电流（A）                                                  | 100  |
-| alternating\_current\_voltage\_a            | float64 | 否    | 交流侧（AC）A相电压（V）                                                | 230  |
-| alternating\_current\_voltage\_b            | float64 | 否    | 交流侧（AC）B相电压（V）                                                | 230  |
-| alternating\_current\_voltage\_c            | float64 | 否    | 交流侧（AC）C相电压（V）                                                | 230  |
-| alternating\_current\_current\_a            | float64 | 否    | 交流侧（AC）A相电流（A）                                                | 50   |
-| alternating\_current\_current\_b            | float64 | 否    | 交流侧（AC）B相电流（A）                                                | 50   |
-| alternating\_current\_current\_c            | float64 | 否    | 交流侧（AC）C相电流（A）                                                | 50   |
-| direct\_current\_input\_power               | float64 | 否    | 直流输入功率（kW）                                                    | 50   |
-| alternating\_current\_output\_power         | float64 | 否    | 交流输出功率（kW）                                                    | 45   |
-| total\_active\_power                        | float64 | 否    | 有功功率（kW）                                                      | 40   |
-| total\_reactive\_power                      | float64 | 否    | 无功功率（kVar）                                                    | 10   |
-| alternating\_current\_output\_frequency     | float64 | 否    | 交流输出频率（Hz）                                                    | 50   |
-| inverter\_efficiency                        | float64 | 否    | 逆变器效率                                                         | 98.5 |
-| inverter\_internal\_temp                    | float64 | 否    | 逆变器内部温度（℃）                                                    | 45   |
-| inverter\_heatsink\_temp                    | float64 | 否    | 散热器温度（℃）                                                      | 50   |
-| running\_status                             | int     | 否    | <p>当前运行状态 </p><p>1-停机 </p><p>2-待机 </p><p>5-运行 </p><p>7-故障</p> | 1    |
-| fault\_status                               | int     | 否    | 故障代码                                                          | 0    |
-| alternating\_current\_output\_power\_factor | float64 | 否    | 交流输出功率因数                                                      | 0.95 |
-| ambient\_temp                               | float64 | 否    | 环境温度（℃）                                                       | 30   |
-| irradiance                                  | float64 | 否    | 辐射强度（W/m²）                                                    | 800  |
-| cumulative\_power\_generation               | float64 | 否    | 累计发电量（单位：kWh）                                                 | 100  |
+<table><thead><tr><th>参数</th><th>类型</th><th>是否必填</th><th width="149">描述</th><th>样例</th></tr></thead><tbody><tr><td>direct_current_voltage</td><td>float64</td><td>否</td><td>直流侧（DC）电压（V）</td><td>500</td></tr><tr><td>direct_current_current</td><td>float64</td><td>否</td><td>直流侧（DC）电流（A）</td><td>100</td></tr><tr><td>alternating_current_voltage_a</td><td>float64</td><td>否</td><td>交流侧（AC）A相电压（V）</td><td>230</td></tr><tr><td>alternating_current_voltage_b</td><td>float64</td><td>否</td><td>交流侧（AC）B相电压（V）</td><td>230</td></tr><tr><td>alternating_current_voltage_c</td><td>float64</td><td>否</td><td>交流侧（AC）C相电压（V）</td><td>230</td></tr><tr><td>alternating_current_current_a</td><td>float64</td><td>否</td><td>交流侧（AC）A相电流（A）</td><td>50</td></tr><tr><td>alternating_current_current_b</td><td>float64</td><td>否</td><td>交流侧（AC）B相电流（A）</td><td>50</td></tr><tr><td>alternating_current_current_c</td><td>float64</td><td>否</td><td>交流侧（AC）C相电流（A）</td><td>50</td></tr><tr><td>direct_current_input_power</td><td>float64</td><td>否</td><td>直流输入功率（kW）</td><td>50</td></tr><tr><td>alternating_current_output_power</td><td>float64</td><td>否</td><td>交流输出功率（kW）</td><td>45</td></tr><tr><td>total_active_power</td><td>float64</td><td>否</td><td>有功功率（kW）</td><td>40</td></tr><tr><td>total_reactive_power</td><td>float64</td><td>否</td><td>无功功率（kVar）</td><td>10</td></tr><tr><td>alternating_current_output_frequency</td><td>float64</td><td>否</td><td>交流输出频率（Hz）</td><td>50</td></tr><tr><td>inverter_efficiency</td><td>float64</td><td>否</td><td>逆变器效率</td><td>98.5</td></tr><tr><td>inverter_internal_temp</td><td>float64</td><td>否</td><td>逆变器内部温度（℃）</td><td>45</td></tr><tr><td>inverter_heatsink_temp</td><td>float64</td><td>否</td><td>散热器温度（℃）</td><td>50</td></tr><tr><td>running_status</td><td>int</td><td>否</td><td><p>当前运行状态 </p><p>1-停机 </p><p>2-待机 </p><p>5-运行 </p><p>7-故障</p></td><td>1</td></tr><tr><td>fault_status</td><td>int</td><td>否</td><td>故障代码</td><td>0</td></tr><tr><td>alternating_current_output_power_factor</td><td>float64</td><td>否</td><td>交流输出功率因数</td><td>0.95</td></tr><tr><td>ambient_temp</td><td>float64</td><td>否</td><td>环境温度（℃）</td><td>30</td></tr><tr><td>irradiance</td><td>float64</td><td>否</td><td>辐射强度（W/m²）</td><td>800</td></tr><tr><td>cumulative_power_generation</td><td>float64</td><td>否</td><td>累计发电量（单位：kWh）</td><td>100</td></tr><tr><td>dc_voltage_1</td><td>float64</td><td>否</td><td>直流单串1电压（单位：V）</td><td></td></tr><tr><td><mark style="color:green;">2,3,4,..., </mark><em><mark style="color:green;">18,19</mark></em></td><td></td><td></td><td></td><td></td></tr><tr><td>dc_voltage_20</td><td>float64</td><td>否</td><td>直流单串20电压（单位：V）</td><td></td></tr><tr><td>dc_current_1</td><td>float64</td><td>否</td><td>直流单串1电流（单位：A）</td><td></td></tr><tr><td><mark style="color:green;">2,3,4,..., 18,19</mark></td><td></td><td></td><td></td><td></td></tr><tr><td>dc_current_20</td><td>float64</td><td>否</td><td>直流单串20电流（单位：A）</td><td></td></tr></tbody></table>
 
 ### **payload - AlternatingChargePailData**
 
