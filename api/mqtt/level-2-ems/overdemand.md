@@ -568,6 +568,7 @@
   "type": "streaming_overdemand_update_all",
   "data": [
      {
+        "device_type": 2,
         "over_demand_status": 1,
         "streaming_status": 1,
         "dynamic_demand_status": 1,
