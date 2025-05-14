@@ -38,6 +38,10 @@ description: V2
 
 <table><thead><tr><th align="center">参数</th><th width="119" align="center">类型</th><th width="98" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">running_status</td><td align="center">int</td><td>false</td><td align="center">PCS运行状态<br>0-未知状态<br>1-停机<br>2-待机<br>3-充电<br>4-放电<br>5-运行<br>6-离线<br>7-故障</td><td align="center">2</td></tr><tr><td align="center">pcs_total_active_power</td><td align="center">float</td><td>false</td><td align="center">交流_总有功功率（单位：kW）</td><td align="center">100</td></tr><tr><td align="center">pcs_active_power_phase_a</td><td align="center">float</td><td>false</td><td align="center">交流_A相有功功率（单位：kW）</td><td align="center">0.16</td></tr><tr><td align="center">pcs_active_power_phase_b</td><td align="center">float</td><td>false</td><td align="center">交流_B相有功功率（单位：kW）</td><td align="center">0.17</td></tr><tr><td align="center">pcs_active_power_phase_c</td><td align="center">float</td><td>false</td><td align="center">交流_C相有功功率（单位：kW）</td><td align="center">0.18</td></tr><tr><td align="center">pcs_total_reactive_power</td><td align="center">float</td><td>false</td><td align="center">交流_总无功功率（单位：kVar）</td><td align="center">0.26</td></tr><tr><td align="center">pcs_reactive_power_phase_a</td><td align="center">float</td><td>false</td><td align="center">交流_A相无功功率（单位：kVar）</td><td align="center">0.19</td></tr><tr><td align="center">pcs_reactive_power_phase_b</td><td align="center">float</td><td>false</td><td align="center">交流_B相无功功率（单位：kVar）</td><td align="center">0.2</td></tr><tr><td align="center">pcs_reactive_power_phase_c</td><td align="center">float</td><td>false</td><td align="center">交流_C相无功功率（单位：kVar）</td><td align="center">0.21</td></tr><tr><td align="center">pcs_voltage_phase_a</td><td align="center">float</td><td>false</td><td align="center">交流_A相电压（单位：V）</td><td align="center">1.1</td></tr><tr><td align="center">pcs_voltage_phase_b</td><td align="center">float</td><td>false</td><td align="center">交流_B相电压（单位：V）</td><td align="center">2.2</td></tr><tr><td align="center">pcs_voltage_phase_c</td><td align="center">float</td><td>false</td><td align="center">交流_C相电压（单位：V）</td><td align="center">3.3</td></tr><tr><td align="center">pcs_current_phase_a</td><td align="center">float</td><td>false</td><td align="center">交流_A相电流（单位：A）</td><td align="center">0.13</td></tr><tr><td align="center">pcs_current_phase_b</td><td align="center">float</td><td>false</td><td align="center">交流_B相电流（单位：A）</td><td align="center">0.14</td></tr><tr><td align="center">pcs_current_phase_c</td><td align="center">float</td><td>false</td><td align="center">交流_C相电流（单位：A）</td><td align="center">0.15</td></tr><tr><td align="center">pcs_total_power_factor</td><td align="center">float</td><td>false</td><td align="center">交流_总功率因数</td><td align="center">0.28</td></tr><tr><td align="center">pcs_power_factor_phase_a</td><td align="center">float</td><td>false</td><td align="center">交流_A相功率因数</td><td align="center">1.23</td></tr><tr><td align="center">pcs_power_factor_phase_b</td><td align="center">float</td><td>false</td><td align="center">交流_B相功率因数</td><td align="center">4.56</td></tr><tr><td align="center">pcs_power_factor_phase_c</td><td align="center">float</td><td>false</td><td align="center">交流_C相功率因数</td><td align="center">7.89</td></tr><tr><td align="center">pcs_frequency_grid</td><td align="center">float</td><td>false</td><td align="center">交流_电网总频率（单位：Hz）</td><td align="center"></td></tr><tr><td align="center">pcs_frequency_phase_a</td><td align="center">float</td><td>false</td><td align="center">交流_A相频率（单位：Hz）</td><td align="center"></td></tr><tr><td align="center">pcs_frequency_phase_b</td><td align="center">float</td><td>false</td><td align="center">交流_B相频率（单位：Hz）</td><td align="center"></td></tr><tr><td align="center">pcs_frequency_phase_c</td><td align="center">float</td><td>false</td><td align="center">交流_C相频率（单位：Hz）</td><td align="center"></td></tr><tr><td align="center">pcs_ac_daily_charge_energy</td><td align="center">float</td><td>false</td><td align="center">交流_日充电量（单位：kWh）</td><td align="center"></td></tr><tr><td align="center">pcs_ac_daily_discharge_energy</td><td align="center">float</td><td>false</td><td align="center">交流_日放电量（单位：kWh）</td><td align="center"></td></tr><tr><td align="center">pcs_ac_charge_accumulated_energy</td><td align="center">float</td><td>false</td><td align="center">交流_总充电电量（单位：kWh）</td><td align="center"></td></tr><tr><td align="center">pcs_ac_discharge_accumulated_energy</td><td align="center">float</td><td>false</td><td align="center">交流_总放电电量（单位：kWh）</td><td align="center"></td></tr><tr><td align="center">pcs_input_power</td><td align="center">float</td><td>false</td><td align="center">直流_功率（单位：kW）</td><td align="center">0.33</td></tr><tr><td align="center">pcs_input_voltage</td><td align="center">float</td><td>false</td><td align="center">直流_电压（单位：V）</td><td align="center">3.4</td></tr><tr><td align="center">pcs_input_current</td><td align="center">float</td><td>false</td><td align="center">直流_电流（单位：A）</td><td align="center">0.35</td></tr><tr><td align="center">pcs_alarm_status</td><td align="center">int</td><td>false</td><td align="center">告警状态<br>0-正常<br>1-告警</td><td align="center"></td></tr><tr><td align="center">pcs_fault_status</td><td align="center">int</td><td>false</td><td align="center">故障状态<br>0-正常<br>1-故障</td><td align="center"></td></tr><tr><td align="center">pcs_grid_voltage_ab</td><td align="center">float</td><td>false</td><td align="center">AB相电网线电压（单位：V）</td><td align="center"></td></tr><tr><td align="center">pcs_grid_voltage_bc</td><td align="center">float</td><td>false</td><td align="center">BC相电网线电压（单位：V）</td><td align="center"></td></tr><tr><td align="center">pcs_grid_voltage_ca</td><td align="center">float</td><td>false</td><td align="center">CA相电网线电压（单位：V）</td><td align="center"></td></tr><tr><td align="center">pcs_internal_temp</td><td align="center">float</td><td>false</td><td align="center">设备内部腔体温度（单位：℃）</td><td align="center"></td></tr><tr><td align="center">igbt_temp_phase_a</td><td align="center">float</td><td>false</td><td align="center">A相IGBT温度（单位：℃）</td><td align="center"></td></tr><tr><td align="center">igbt_temp_phase_b</td><td align="center">float</td><td>false</td><td align="center">B相IGBT温度（单位：℃）</td><td align="center"></td></tr><tr><td align="center">igbt_temp_phase_c</td><td align="center">float</td><td>false</td><td align="center">C相IGBT温度（单位：℃）</td><td align="center"></td></tr></tbody></table>
 
+### **payload - RegularReportSubEMSMPPT**
+
+<table><thead><tr><th width="320.4921875">字段名</th><th width="80.12890625">数据类型</th><th width="58.015625" data-type="checkbox">是否必填</th><th width="206.23828125">描述</th><th width="124">样例</th></tr></thead><tbody><tr><td>pv_running_status</td><td>int</td><td>false</td><td>PV运行状态 （(1-关机 2-开机)）</td><td>1</td></tr><tr><td>pv_low_pressure_1_status</td><td>int</td><td>false</td><td>低压侧PV1路状态 (1-关机 2-开机)</td><td>1</td></tr><tr><td>pv_low_pressure_2_status</td><td>int</td><td>false</td><td>低压侧PV2路状态(1-关机 2-开机)</td><td>1</td></tr><tr><td>pv_low_pressure_3_status</td><td>int</td><td>false</td><td>低压侧PV3路状态(1-关机 2-开机)</td><td>1</td></tr><tr><td>pv_low_pressure_4_status</td><td>int</td><td>false</td><td>低压侧PV4路状态(1-关机 2-开机)</td><td>1</td></tr><tr><td>pv_fault_status</td><td>int</td><td>false</td><td>故障状态（0-正常 1-故障）</td><td>0</td></tr><tr><td>pv_alarm_status</td><td>int</td><td>false</td><td>告警状态（0-正常 1-告警）</td><td>0</td></tr><tr><td>pv_steady_function_mode</td><td>int</td><td>false</td><td>稳态功能模式（1-高压侧稳压稳流 2-低压侧稳流）</td><td>1</td></tr><tr><td>pv_high_pressure_steady_voltage_value</td><td>float64</td><td>false</td><td>高压侧稳态电压值 V</td><td>800</td></tr><tr><td>pv_high_pressure_steady_current_value</td><td>float64</td><td>false</td><td>高压侧稳态电流值 A</td><td>20</td></tr><tr><td>pv_low_pressure_1_voltage</td><td>float64</td><td>false</td><td>低压侧PV1路电压 V</td><td>700</td></tr><tr><td>pv_low_pressure_1_current</td><td>float64</td><td>false</td><td>低压侧PV1路电流 A</td><td>10</td></tr><tr><td>pv_low_pressure_1_power</td><td>float64</td><td>false</td><td>低压侧PV1路功率 kW</td><td>7</td></tr><tr><td>pv_low_pressure_2_voltage</td><td>float64</td><td>false</td><td>低压侧PV2路电压 V</td><td>700</td></tr><tr><td>pv_low_pressure_2_current</td><td>float64</td><td>false</td><td>低压侧PV2路电流 A</td><td>10</td></tr><tr><td>pv_low_pressure_2_power</td><td>float64</td><td>false</td><td>低压侧PV2路功率 kW</td><td>7</td></tr><tr><td>pv_low_pressure_3_voltage</td><td>float64</td><td>false</td><td>低压侧PV3路电压 V</td><td>700</td></tr><tr><td>pv_low_pressure_3_current</td><td>float64</td><td>false</td><td>低压侧PV3路电流 A</td><td>10</td></tr><tr><td>pv_low_pressure_3_power</td><td>float64</td><td>false</td><td>低压侧PV3路功率 kW</td><td>7</td></tr><tr><td>pv_low_pressure_4_voltage</td><td>float64</td><td>false</td><td>低压侧PV4路电压 V</td><td>700</td></tr><tr><td>pv_low_pressure_4_current</td><td>float64</td><td>false</td><td>低压侧PV4路电流 A</td><td>10</td></tr><tr><td>pv_low_pressure_4_power</td><td>float64</td><td>false</td><td>低压侧PV4路功率 kW</td><td>7</td></tr><tr><td>pv_high_pressure_voltage</td><td>float64</td><td>false</td><td>高压侧电压 V</td><td>700</td></tr><tr><td>pv_high_pressure_current</td><td>float64</td><td>false</td><td>高压侧电流 A</td><td>10</td></tr><tr><td>pv_high_pressure_power</td><td>float64</td><td>false</td><td>高压侧功率 kW</td><td>7</td></tr><tr><td>pv_igbt_temperature</td><td>float64</td><td>false</td><td>IGBT温度 ℃</td><td>20</td></tr><tr><td>pv_power_generation</td><td>float64</td><td>false</td><td>总PV发电量 kWh</td><td>-</td></tr><tr><td>pv_daily_power_generation</td><td>float64</td><td>false</td><td>当日PV发电量 kWh</td><td>-</td></tr><tr><td>pv_daily_low_pressure_1_power_generation</td><td>float64</td><td>false</td><td>当日PV1路发电 kWh</td><td>-</td></tr><tr><td>pv_daily_low_pressure_2_power_generation</td><td>float64</td><td>false</td><td>当日PV2路发电量 kWh</td><td>-</td></tr><tr><td>pv_daily_low_pressure_3_power_generation</td><td>float64</td><td>false</td><td>当日PV3路发电量 kWh</td><td>-</td></tr><tr><td>pv_daily_low_pressure_4_power_generation</td><td>float64</td><td>false</td><td>当日PV4路发电量 kWh</td><td>-</td></tr></tbody></table>
+
 ### **payload - RegularReportEMS**
 
 <table><thead><tr><th width="178" align="center">参数</th><th width="109" align="center">类型</th><th width="98" data-type="checkbox">是否必填</th><th align="center">描述</th><th align="center">样例</th></tr></thead><tbody><tr><td align="center">mode</td><td align="center">int</td><td>false</td><td align="center">运行模式<br>0-本地调试模式<br>1-本地自动模式<br>2-远程被动模式</td><td align="center"></td></tr><tr><td align="center">charge_strategy</td><td align="center">待定</td><td>false</td><td align="center">充放电策略<br>（仅mode为远程时有）</td><td align="center"></td></tr><tr><td align="center">protection_strategy</td><td align="center">待定</td><td>false</td><td align="center">安全保护<br>（仅mode为远程时有）</td><td align="center"></td></tr></tbody></table>
@@ -262,6 +266,98 @@ _**SubEleMeterData一致**_
 }
 ```
 {% endcode %}
+
+### **Payload示例 - sub\_ems\_mppt**
+
+```json
+{
+    "trace_id": "554de8d4-0840-4301-80c2-c0e4d0e32603",
+    "mid": "c9deebc3-1546-4853-b14c-7ce612c4d0df",
+    "type": "report_regular",
+    "sub_device_name": "emu",
+    "sub_device_id": 2,
+    "device_uid": "ovBotLcndbN4buxc3yjZsi-138"
+    "timestamp": 1747193804039,
+    "data": [
+        {
+            "type": "sub_ems_mppt",
+            "index": 0,
+            "data": {
+                "pv_running_status": 1,
+                "pv_low_pressure_1_status": 1,
+                "pv_low_pressure_2_status": 1,
+                "pv_low_pressure_3_status": 1,
+                "pv_low_pressure_4_status": 1,
+                "pv_fault_status": 1,
+                "pv_alarm_status": 1,
+                "pv_steady_function_mode": 1,
+                "pv_high_pressure_steady_voltage_value": 3501.1,
+                "pv_high_pressure_steady_current_value": 3501.2,
+                "pv_low_pressure_1_voltage": 3505,
+                "pv_low_pressure_1_current": -3048.5,
+                "pv_low_pressure_1_power": -304.84,
+                "pv_low_pressure_2_voltage": 3505.3,
+                "pv_low_pressure_2_current": -3048.2,
+                "pv_low_pressure_2_power": -304.81,
+                "pv_low_pressure_3_voltage": 3507.2,
+                "pv_low_pressure_3_current": -3046.3,
+                "pv_low_pressure_3_power": -304.62,
+                "pv_low_pressure_4_voltage": 3507.5,
+                "pv_low_pressure_4_current": -3046,
+                "pv_low_pressure_4_power": -304.59,
+                "pv_high_pressure_voltage": 3505.6,
+                "pv_high_pressure_current": -3047.9,
+                "pv_high_pressure_power": -304.78,
+                "pv_igbt_temperature": -3047.7,
+                "pv_power_generation": 229772722.1,
+                "pv_daily_power_generation": 229785829.5,
+                "pv_daily_low_pressure_1_power_generation": 229798936.9,
+                "pv_daily_low_pressure_2_power_generation": 229812044.3,
+                "pv_daily_low_pressure_3_power_generation": 229825151.7,
+                "pv_daily_low_pressure_4_power_generation": 229838259.1
+            }
+        },
+        {
+            "type": "sub_ems_mppt",
+            "index": 1,
+            "data": {
+                "pv_running_status": 1,
+                "pv_low_pressure_1_status": 1,
+                "pv_low_pressure_2_status": 1,
+                "pv_low_pressure_3_status": 1,
+                "pv_low_pressure_4_status": 1,
+                "pv_fault_status": 1,
+                "pv_alarm_status": 1,
+                "pv_steady_function_mode": 1,
+                "pv_high_pressure_steady_voltage_value": 3511.1,
+                "pv_high_pressure_steady_current_value": 3511.2,
+                "pv_low_pressure_1_voltage": 3515,
+                "pv_low_pressure_1_current": -3038.5,
+                "pv_low_pressure_1_power": -303.84,
+                "pv_low_pressure_2_voltage": 3515.3,
+                "pv_low_pressure_2_current": -3038.2,
+                "pv_low_pressure_2_power": -303.81,
+                "pv_low_pressure_3_voltage": 3517.2,
+                "pv_low_pressure_3_current": -3036.3,
+                "pv_low_pressure_3_power": -303.62,
+                "pv_low_pressure_4_voltage": 3517.5,
+                "pv_low_pressure_4_current": -3036,
+                "pv_low_pressure_4_power": -303.59,
+                "pv_high_pressure_voltage": 3515.6,
+                "pv_high_pressure_current": -3037.9,
+                "pv_high_pressure_power": -303.78,
+                "pv_igbt_temperature": -3037.7,
+                "pv_power_generation": 230428092.1,
+                "pv_daily_power_generation": 230441199.5,
+                "pv_daily_low_pressure_1_power_generation": 230454306.9,
+                "pv_daily_low_pressure_2_power_generation": 230467414.3,
+                "pv_daily_low_pressure_3_power_generation": 230480521.7,
+                "pv_daily_low_pressure_4_power_generation": 230493629.1
+            }
+        }
+    ]
+}
+```
 
 ### **Payload示例 - ems**
 
