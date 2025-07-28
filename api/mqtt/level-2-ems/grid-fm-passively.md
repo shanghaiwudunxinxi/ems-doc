@@ -2,9 +2,7 @@
 
 ## 上报被动调频信息
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`grid_fm/receive`</mark>`/post`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`grid_fm/receive`</mark>`/post`
+* **Topic：**`${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`grid_fm/receive`</mark>`/post`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 

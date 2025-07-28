@@ -2,9 +2,7 @@
 
 ## 上报放电深度保护策略
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge_percentage/details`</mark>`/post`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge_percentage/details`</mark>`/post`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge_percentage/details`</mark>`/post`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -57,9 +55,7 @@
 
 ## 平台请求同步放电深度保护策略
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge_percentage/sync`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge_percentage/sync`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge_percentage/sync`</mark>`/command`
 * **权限：**&#x53D1;布
 *   **Payload主结构**
 
@@ -84,9 +80,7 @@
 
 ### 同步放电深度保护策略响应
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`device_info/sync`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`device_info/sync`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`device_info/sync`</mark>`/result`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 

@@ -6,9 +6,7 @@ description: OTA
 
 ## 下发OTA命令
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`ota/upgrade`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`ota/upgrade`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`ota/upgrade`</mark>`/command`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -42,25 +40,16 @@ description: OTA
 
 ### 同步OTA结果响应
 
-* **说明：**
+{% hint style="info" %}
+这里结果会有两阶段，发送两次响应，不同阶段对应的状态不同。
 
-这里结果会有两阶段，发送两次响应，不同阶段对应的状态不同
+* 第一阶段：第一阶段是准备阶段，在下载好确认文件无误后状态是 **2-文件已准备**。
+  * 状态有：**1-禁止更新、2-更新已准备、3-更新准备失败**
+* 第二阶段：第二阶段是最后结果，如果更新成功后状态是  **4-更新成功**。
+  * 状态有：**4-更新成功、5-回滚成功、6-回滚失败**
+{% endhint %}
 
-* 第一阶段
-
-第一阶段是准备阶段，在下载好确认文件无误后状态是 **2-文件已准备**。
-
-状态有：**1-禁止更新 2-更新已准备3-更新准备失败**
-
-* 第二阶段
-
-第二阶段是最后结果，如果更新成功后状态是  **4-更新成功**。
-
-状态有：**4-更新成功 5-回滚成功 6-回滚失败**
-
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`ota/upgrade`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`ota/upgrade`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`ota/upgrade`</mark>`/result`
 * **权限：**&#x8BA2;阅
 * **Payload主结构**
 

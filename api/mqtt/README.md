@@ -6,12 +6,6 @@
 
 ## 使用流程
 
-1. 用户提供MQTT账号信息
-2. 在EMS设备上配置MQTT账号信息
-3. 用户连接MQTT，订阅相关Topic
-
-## 接口清单
-
-### 设备事件
-
-<table data-view="cards"><thead><tr><th>分类</th><th>接口名称</th><th>接口</th></tr></thead><tbody><tr><td><a href="broken-reference">设备事件</a></td><td><a href="broken-reference">定时信息上报</a></td><td><mark style="background-color:green;">SUB</mark> <code>v1/user/$(TENANT}/$(DEVICE}/</code><mark style="color:red;"><code>report/regular</code></mark><code>/post</code></td></tr></tbody></table>
+1. 用户提供MQTT Broker账号信息
+2. 在EMS设备上配置MQTT账号信息、Topic、上报频率等
+3. 用户连接MQTT，订阅相关Topic，通过相关Topic下发控制

@@ -6,9 +6,7 @@ description: V2
 
 ## 定时上报信息
 
-* **Topic：**
-  * 用户自定义MQTT： `v2/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`report/regular`</mark>`/post`
-  * 平台默认MQTT： `v2/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`report/regular`</mark>`/post`
+* **Topic：** `${自定义前缀`<mark style="color:red;">`v2`</mark>`}/${DEVICE}/`<mark style="color:red;">`report/regular`</mark>`/post`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
