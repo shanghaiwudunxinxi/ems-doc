@@ -2,9 +2,7 @@
 
 ## 上报充放电策略
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/list`</mark>`/post`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/list`</mark>`/post`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/list`</mark>`/post`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -83,9 +81,7 @@
 
 ## 平台请求同步充放电策略
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/command`
 * **权限：**&#x53D1;布
 *   **Payload主结构**
 
@@ -107,9 +103,7 @@
 
 ### 同步充放电策略响应
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/sync`</mark>`/result`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -180,9 +174,7 @@
 
 ## 下发创建充放电策略指令
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/command`
 * **权限：**&#x53D1;布
 *   **Payload主结构**
 
@@ -239,9 +231,7 @@
 
 ### 创建充放电策略响应
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/create`</mark>`/result`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -274,9 +264,7 @@
 
 ## 下发修改充放电策略指令
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/command`
 * **权限：**&#x53D1;布
 *   **Payload主结构**
 
@@ -334,9 +322,7 @@
 
 ### 下发修改充放电策略响应
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/update`</mark>`/result`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -360,9 +346,7 @@
 
 ## 下发删除充放电策略指令
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/command`
 * **权限：**&#x53D1;布
 *   **Payload主结构**
 
@@ -386,9 +370,7 @@
 
 ### 下发删除充放电策略响应
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/delete`</mark>`/result`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -413,9 +395,7 @@
 
 ## 批量下发充放电策略指令
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/command`
 * **权限：**&#x53D1;布
 *   **Payload主结构**
 
@@ -460,9 +440,7 @@
 
 ### 批量下发充放电策略响应
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/update_all`</mark>`/result`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
@@ -483,9 +461,7 @@
 
 ## 下发创建/更新充放电策略（根据支路ID）
 
-* **Topic：**
-  * 用户自定义MQTT： `v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/command`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/command`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/command`
 * **权限：**&#x53D1;布
 *   **Payload主结构**
 
@@ -546,9 +522,7 @@
 
 ### 创建/更新充放电策略（根据支路ID）响应
 
-* **Topic：**
-  * 用户自定义MQTT：`v1/wudun/${PRODUCT_KEY}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/result`
-  * 平台默认MQTT： `v1/user/${TENANT}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/result`
+* **Topic：** `${自定义前缀v1}/${DEVICE}/`<mark style="color:red;">`charge/by_node`</mark>`/result`
 * **权限：**&#x8BA2;阅
 *   **Payload主结构**
 
