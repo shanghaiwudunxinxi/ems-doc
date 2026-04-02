@@ -1,9 +1,9 @@
 # EMS接口文档说明
 
 {% hint style="warning" %}
-<mark style="color:$danger;">**并非**</mark>任意产品都所有接口！
+<mark style="color:$danger;">**并非**</mark>任意产品都可调用所有接口！
 
-具体可使用的接口请联系对接人员！
+具体可使用的接口请咨询对接人员！
 {% endhint %}
 
 ## 说明
